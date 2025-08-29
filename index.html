@@ -1,0 +1,143 @@
+﻿<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Darrell Walker — Portfolio</title>
+    <meta name="description" content="Portfolio of Darrell Walker, software engineer (backend & full-stack). Projects, skills, and contact." />
+    <link rel="stylesheet" href="styles/index-css.css" type="text/css">
+    <link rel="icon" href="images/favicon.ico" />
+</head>
+<body>
+    <header class="site-header">
+        <button id="nav-toggle"
+                aria-label="Open navigation menu"
+                aria-controls="site-nav"
+                aria-expanded="false">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+
+        <nav id="site-nav" class="site-nav">
+            <div class="nav-header">
+                <img src="images/dw-logo.png" alt="DW logo" width="80" height="80" loading="eager" />
+            </div>
+            <ul>
+                <li><a href="#intro-section">Home</a></li>
+                <li><a href="#section1">About</a></li>
+                <li><a href="#section2">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="overlay" class="overlay"></div>
+
+    <main>
+
+        <div id="intro-section" class="section intro">
+            <section id="introduction">
+                <h1>Hello, Im Darrell Walker</h1>
+                <h2 class="subtitle">A <span id="typewriter" aria-live="polite"></span></h2>
+            </section>
+        </div>
+
+        <div id="section1" class="section about-wrapper">
+            <section id="about" class="card">
+                <h2>About Me:</h2>
+                <div class="about-container">
+                    <img src="images/selfie.png" alt="A image of a Self Portrait" width="320" height="320" loading="lazy" decoding="async" />
+                    <p>
+                        I am a recent graduate of Southern New Hampshire University, where I earned a Bachelor of Science in Software Engineering. While I specialize in back-end development,
+                        I also have a strong interest in full-stack web development and enjoy designing responsive, user-friendly interfaces such as this portfolio. My technical skill set includes proficiency in Python,
+                        Java, C++, JavaScript, HTML, CSS, and experience working with tools such as Node.js, Express, MongoDB, and Git.
+                        <br />
+                        <br />
+                        Throughout my academic and personal projects, I’ve focused on writing clean, efficient, and secure code, building scalable applications, and solving real-world problems through technology.
+                        Whether I’m collaborating on a team or developing independently, I bring strong problem-solving skills, a continuous learning mindset, and a passion for delivering quality software.
+                        <br />
+                        <br />
+                        I'm currently seeking opportunities where I can contribute to innovative development teams and continue to grow as a developer.
+                    </p>
+                </div>
+            </section>
+            <aside id="skills" class="card" aria-labelledby="skills-heading">
+                <h2 id="skills-heading" class="center">Skills:</h2>
+
+                <ul class="skills-list" role="list">
+                  <li><span class="skill-name">HTML &amp; CSS</span> <meter min="0" max="10" value="4" aria-label="HTML & CSS proficiency 4 out of 10">4/10</meter></li>
+                  <li><span class="skill-name">JavaScript</span> <meter min="0" max="10" value="2" aria-label="JavaScript proficiency 2 out of 10">2/10</meter></li>
+                  <li><span class="skill-name">Python</span> <meter min="0" max="10" value="3.5" aria-label="Python proficiency 3.5 out of 10">3.5/10</meter></li>
+                  <li><span class="skill-name">Java</span> <meter min="0" max="10" value="1.5" aria-label="Java proficiency 1.5 out of 10">1.5/10</meter></li>
+                  <li><span class="skill-name">C++</span> <meter min="0" max="10" value="1.5" aria-label="C++ proficiency 1.5 out of 10">1.5/10</meter></li>
+                  <li><span class="skill-name">Git</span> <meter min="0" max="10" value="4.5" aria-label="Git proficiency 4.5 out of 10">4.5/10</meter></li>
+                  <li><span class="skill-name">MongoDB</span> <meter min="0" max="10" value="3.5" aria-label="MongoDB proficiency 3.5 out of 10">3.5/10</meter></li>
+                </ul>
+            </aside>
+        </div>
+
+        <div id="section2" class="section projects-wrapper">
+            <aside id="links" class="card">
+                <h2 class="center">Links:</h2>
+                <ul class="link-list" role="list">
+                    <!-- <li><a href="https://github.com/yourhandle" target="_blank" rel="noopener">GitHub</a></li> -->
+                    <!-- <li><a href="https://www.linkedin.com/in/yourhandle" target="_blank" rel="noopener">LinkedIn</a></li> -->
+                </ul>
+            </aside>
+
+            <section id="projects-container" class="card">
+                <div class="projects-header">
+                    <h2>Projects:</h2>
+                </div>
+                <div class="project-list" aria-live="polite">
+                    <!-- example card -->
+                    <!--
+                    <div class="project-card">
+                      <div class="project-card-wrapper">
+                        <span>Travlr Getaways</span>
+                        <div class="project-tooltip">Angular + Express + MongoDB full-stack app.</div>
+                      </div>
+                    </div>
+                    -->
+                </div>
+            </section>
+        </div>
+
+            <section id="contact" class="section card">
+                <h2 class="contact-intro">Contact Me:</h2>
+                <p>
+                    Thank you for visiting my portfolio! Your interest is appreciated. Please take a moment to explore my work and feel free to leave a review.
+                    Whether you're considering employment opportunities, collaboration, or simply wish to get in touch, I welcome your message. Your feedback and inquiries
+                    are valuable to me, and I look forward to connecting with you.
+                </p>
+                <br />
+                <form action="/" method="post" class="contact-form" novalidate>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required><br><br>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required><br><br>
+
+                    <label for="message">Message:</label><br>
+                    <textarea id="message" name="message" rows="4" required></textarea><br><br>
+
+                    <label for="rating">Rating:</label>
+                    <div class="rating" name="rating">
+                        <span class="star" data-value="1">&#9733;</span>
+                        <span class="star" data-value="2">&#9733;</span>
+                        <span class="star" data-value="3">&#9733;</span>
+                        <span class="star" data-value="4">&#9733;</span>
+                        <span class="star" data-value="5">&#9733;</span>
+                    </div>
+                    <input type="submit" class="btn" value="Submit">
+                </form>
+            </section>
+    </main>
+    <footer class="site-footer">
+        <p id="copy">&copy; <span id="year">2025</span> Darrell Walker All rights reserved.</p>
+    </footer>
+
+    <script defer src="scripts/index-script.js"></script>
+</body>
+</html>

@@ -3,12 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\walke\\Workspace\\EPortfolio\\XxDoomsdayxX.github.io\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\walke\\Workspace\\EPortfolio\\XxDoomsdayxX.github.io\\index.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:index.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\walke\\Workspace\\EPortfolio\\XxDoomsdayxX.github.io\\_config.yml||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:_config.yml||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\walke\\Workspace\\EPortfolio\\XxDoomsdayxX.github.io\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\walke\\Workspace\\EPortfolio\\XxDoomsdayxX.github.io\\README.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
@@ -27,32 +23,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "index.md",
-              "DocumentMoniker": "C:\\Users\\walke\\Workspace\\EPortfolio\\XxDoomsdayxX.github.io\\index.md",
-              "RelativeDocumentMoniker": "index.md",
-              "ToolTip": "C:\\Users\\walke\\Workspace\\EPortfolio\\XxDoomsdayxX.github.io\\index.md",
-              "RelativeToolTip": "index.md",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
-              "WhenOpened": "2025-08-28T04:44:59.559Z",
+              "Title": "index.html",
+              "DocumentMoniker": "C:\\Users\\walke\\Workspace\\EPortfolio\\XxDoomsdayxX.github.io\\index.html",
+              "RelativeDocumentMoniker": "index.html",
+              "ToolTip": "C:\\Users\\walke\\Workspace\\EPortfolio\\XxDoomsdayxX.github.io\\index.html",
+              "RelativeToolTip": "index.html",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAAAIwAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-08-29T06:19:57.96Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "_config.yml",
-              "DocumentMoniker": "C:\\Users\\walke\\Workspace\\EPortfolio\\XxDoomsdayxX.github.io\\_config.yml",
-              "RelativeDocumentMoniker": "_config.yml",
-              "ToolTip": "C:\\Users\\walke\\Workspace\\EPortfolio\\XxDoomsdayxX.github.io\\_config.yml",
-              "RelativeToolTip": "_config.yml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
-              "WhenOpened": "2025-08-28T04:10:08.256Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
               "Title": "README.md",
               "DocumentMoniker": "C:\\Users\\walke\\Workspace\\EPortfolio\\XxDoomsdayxX.github.io\\README.md",
               "RelativeDocumentMoniker": "README.md",

@@ -1,7 +1,0 @@
-title: My Jekyll Site Created By Darrell Walker
-description: My GitHub Pages site with a Jekyll theme
-baseurl: "" # leave empty for root
-url: "https://github.com/XxDoomsdayxX/XxDoomsdayxX.github.io"
-remote_theme: pages-themes/minimal@v0.2.0
-plugins:
-  - jekyll-feed
