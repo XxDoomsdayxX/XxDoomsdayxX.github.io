@@ -554,6 +554,7 @@ img {
     html, body {
         max-width: 100%;
         overflow-x: hidden;
+        color: white;
     }
 
     main {
@@ -563,8 +564,8 @@ img {
 
     /* Bigger tap target for burger */
     #nav-toggle {
-        width: 44px; /* WCAG recommended touch size */
-        height: 44px;
+        width: 88px; /* WCAG recommended touch size */
+        height: 88px;
         padding: 6px;
     }
 
