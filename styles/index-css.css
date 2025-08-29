@@ -564,8 +564,8 @@ img {
 
     /* Bigger tap target for burger */
     #nav-toggle {
-        width: 88px; /* WCAG recommended touch size */
-        height: 88px;
+        width: 44px; /* WCAG recommended touch size */
+        height: 44px;
         padding: 6px;
     }
 
