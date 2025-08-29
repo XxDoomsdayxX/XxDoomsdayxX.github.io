@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\images",
+    "\\scripts",
+    "\\styles"
   ],
-  "SelectedNode": "\\index.md",
+  "SelectedNode": "\\scripts",
   "PreviewInSolutionExplorer": false
 }
