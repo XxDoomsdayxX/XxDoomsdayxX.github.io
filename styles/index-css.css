@@ -175,6 +175,8 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    display: flex;
+    flex-direction: column;
 }
 
 #introduction {
@@ -191,7 +193,23 @@ header {
     justify-content: center;
     padding: 0;
     gap: 0.25rem;
-    transform: translateY(-24vh);
+    transform: translateY(-22vh);
+}
+
+#quote-title {
+    font-size: 1.5rem;
+    color: white;
+    padding-bottom: 2rem;
+    text-align: left;
+    width: 50%;
+}
+
+#quote {
+    font-size: 1.25rem;
+    font-style: italic;
+    color: white;
+    margin: 0 1rem 1rem;
+    text-align: center;
 }
 
 /* Section defaults */
@@ -321,17 +339,51 @@ section {
 }
 
     .link-list li {
-        margin: 0.4rem 0;
+        margin: 2rem 0;
     }
 
     .link-list a {
-        color: #fff;
+        color: cornflowerblue;
         text-decoration: none;
+        font-size: 1.25rem;
     }
 
         .link-list a:hover {
             color: #FFD700;
         }
+
+#github-logo {
+    height: 32px;
+    width: auto;
+    margin-right: 12px;
+    position: relative;
+    top: 6px;
+}
+
+#linkedin-logo {
+    height: 32px;
+    width: auto;
+    margin-right: 12px;
+    position: relative;
+    top: 6px;
+    box-shadow: 2px 0px 3px white;
+}
+
+#merit-logo {
+    height: 42px;
+    width: auto;
+    margin-right: 8px;
+    position: relative;
+    top: 10px;
+}
+
+#stack-logo {
+    height: 42px;
+    width: auto;
+    margin-right: 8px;
+    position: relative;
+    top: 10px;
+}
 
 #projects-container {
     margin: 0 0 3rem 3rem;
@@ -576,6 +628,18 @@ img {
     #intro-section {
         height: auto;
         margin: 1rem;
+    }
+
+    #quote-title {
+        font-size: 1.25rem;
+        text-align: center;
+        width: 100%;
+        padding: 1rem 1rem;
+    }
+
+    #quote {
+        font-size: 1rem;
+        text-align: center;
     }
 
     #introduction {
