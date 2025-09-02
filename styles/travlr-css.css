@@ -1,0 +1,309 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 10px;
+    padding: 0;
+    background-color: black;
+    color: white;
+}
+
+/* Header / top nav */
+header {
+    align-items: center;
+    display: flex;
+}
+
+header a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+    header a:hover {
+        color: yellow;
+        text-decoration: underline;
+    }
+
+.source-link {
+    margin-left: auto;
+}
+
+/* Project overview */
+#project-overview {
+    display: flex;
+    gap: 100px;
+}
+
+#user-img-1 {
+    height:600px;
+    width: auto;
+}
+
+#user-overview {
+    width: 50%;
+    font-size: 1.1rem;
+    padding: 20px;
+}
+
+/* Buttons/links */
+.link {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 50px;
+    margin-right: 20px;
+    padding: 10px 15px;
+    border: 2px solid white;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+    .link:hover {
+        background-color: white;
+        color: black;
+    }
+
+/* separator line */
+hr {
+    border: 1px solid white;
+    margin-top: 50px;
+}
+
+/* Admin overview */
+#admin-overview {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.1rem;
+    margin: 20px 0;
+}
+
+    #admin-overview h2 {
+        margin-top: 40px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+#admin-section-1 {
+    width:60%;
+}
+
+#admin-section-2 {
+    display: flex;
+    gap: 100px;
+}
+
+    #admin-section-2 h2 {
+        text-decoration:underline;
+    }
+
+#admin-section-3 {
+    width:60%;
+    margin-top: 20px;
+}
+
+/* Images section */
+#image-section {
+    margin-top: 40px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+    #image-section h2 {
+        margin-bottom: 50px;
+    }
+
+/* each row of images (flex wraps on narrow widths) */
+#img-div-1,
+#img-div-2,
+#img-div-3,
+#img-div-4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+}
+
+/* Click-to-show overlay */
+#image-section .img-overlay {
+    position: relative;
+    display: inline-block;
+    margin: 25px 25px;
+    cursor: pointer;
+}
+
+    #image-section .img-overlay img {
+        height: 450px;
+        width: 800px;
+        display: block;
+        transition: filter 1s ease, opacity 1s ease;
+    }
+
+    /* the hidden overlay layer (shown when .show is toggled by JS) */
+    #image-section .img-overlay::after {
+        content: attr(data-desc);
+        position: absolute;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 1.2rem;
+        text-align: center;
+        padding: 1rem;
+        background: rgba(0,0,0,.5);
+        opacity: 0;
+        transition: opacity 1s ease;
+        pointer-events: none;
+    }
+
+    /* "show" state toggled via JS: dim the image and reveal the caption */
+    #image-section .img-overlay.show img {
+        filter: grayscale(100%);
+        opacity: 0.05;
+    }
+
+    #image-section .img-overlay.show::after {
+        opacity: 1;
+    }
+
+/* paragraph under the gallery  */
+#image-section p {
+    width: 50%;
+    margin: 20px auto 0;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+/* Footer */
+#copy {
+    color: red;
+    text-align: center;
+    position: relative;
+    top: 140px;
+    width: 100%;
+}
+
+
+/* Mobile overrides */
+@media (max-width: 768px) {
+    body {
+        margin: 10px;
+    }
+
+    hr {
+        margin-top: 32px;
+    }
+
+    /* Header */
+    header {
+        padding: 12px 8px;
+        gap: 8px;
+        flex-wrap: wrap;
+    }
+
+        header a {
+            margin: 6px 8px 0 0;
+            font-size: 0.95rem;
+        }
+
+    .source-link {
+        margin-left: auto;
+    }
+
+    /* Project overview  */
+    #project-overview {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    #user-img-1 {
+        width: 100%;
+        height: auto;
+    }
+
+    #user-overview {
+        width: 100%;
+        padding: 0 12px;
+        font-size: 1rem;
+    }
+
+    /* Buttons/links */
+    .link {
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin: 16px 0 0;
+    }
+
+    /* Admin overview sections */
+    #admin-overview {
+        font-size: 1rem;
+        margin: 16px 0;
+    }
+
+    #admin-section-1, #admin-section-3 {
+        width: 100%;
+        padding: 0 12px;
+    }
+
+    #admin-section-2 {
+        flex-direction: column;
+        gap: 24px;
+        align-items: stretch;
+    }
+
+    #admin-overview h2 {
+        margin: 24px 0 12px;
+    }
+
+    /* Images section */
+    #image-section {
+        margin-top: 24px;
+    }
+
+    #img-div-1, #img-div-2, #img-div-3, #img-div-4 {
+        gap: 0;
+    }
+
+    #image-section .img-overlay {
+        margin: 12px;
+        width: 100%;
+        touch-action: manipulation;
+    }
+
+        #image-section .img-overlay img {
+            width: 100%;
+            height: auto;
+        }
+
+        /* Overlay text readability on small screens (still click-to-show via JS) */
+        #image-section .img-overlay::after {
+            font-size: 1rem;
+            padding: 12px;
+        }
+
+    /* Paragraphs under images/sections */
+    #image-section p {
+        width: 90%;
+        font-size: 1rem;
+    }
+
+    /* Footer */
+    #copy {
+        position: static;
+        top: 0;
+        margin: 32px 0 16px;
+    }
+}
