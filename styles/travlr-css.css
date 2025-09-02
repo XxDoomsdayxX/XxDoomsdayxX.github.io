@@ -140,12 +140,13 @@ hr {
     position: relative;
     display: inline-block;
     margin: 25px 25px;
+    width: min(100%, 800px);
     cursor: pointer;
 }
 
     #image-section .img-overlay img {
-        height: 450px;
-        width: 800px;
+        width: 100%;
+        height: auto;
         display: block;
         transition: filter 1s ease, opacity 1s ease;
     }
@@ -280,7 +281,9 @@ hr {
     #image-section .img-overlay {
         margin: 12px;
         width: 100%;
+        margin: 12px auto;
         touch-action: manipulation;
+        outline: 1px dashed lime;
     }
 
         #image-section .img-overlay img {
