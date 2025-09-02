@@ -137,8 +137,8 @@
                 <p>
                     This admin SPA is the authoring tool for the site: it's where all real work happens-secure login,
                     form validation, and CRUD-while the public template simply displays the content to end users.
-                    The admin app is an Angular single-page site hosted as static files (Vercel/Netlify).
-                    The API runs on a small Node/Express server (Render/Railway) and the data lives in MongoDB Atlas.
+                    The admin app is an Angular single-page site hosted as static files.
+                    The API runs on a small Node/Express server and the data lives in MongoDB Atlas.
                     The app reads the API's URL from an environment file, and private keys (token secret and database URI) are stored as server settings, not in code.
                     The host sends unknown paths to index.html so refresh and deep links work. Everything uses HTTPS, and the API only accepts calls from my domains.
                 </p>
