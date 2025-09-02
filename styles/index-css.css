@@ -704,19 +704,25 @@ img {
     }
 
     .project-card {
-        min-width: 0px;
-        max-width: 340px;
+        width: min(92vw, 420px);
+        max-width: 100%;
         padding: 12px;
+        margin: 12px auto;
         align-items: center;
-        text-align:center;
-        position: relative;
-        right: 30px;
+        text-align: center;
+        position: static;
+        right: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .project-list {
         display: flex;
         flex-direction: column;
-        overflow-x: auto;
+        align-items: center;
+        gap: 16px;
+        overflow-x: visible;
         -webkit-overflow-scrolling: touch;
     }
 
