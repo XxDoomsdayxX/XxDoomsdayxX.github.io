@@ -7,6 +7,10 @@
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:styles\\index-css.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\walke\\Workspace\\EPortfolio\\XxDoomsdayxX.github.io\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\walke\\Workspace\\EPortfolio\\XxDoomsdayxX.github.io\\styles\\page-not-found-css.css||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:styles\\page-not-found-css.css||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
@@ -22,8 +26,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "index.html",
+              "DocumentMoniker": "C:\\Users\\walke\\Workspace\\EPortfolio\\XxDoomsdayxX.github.io\\index.html",
+              "RelativeDocumentMoniker": "index.html",
+              "ToolTip": "C:\\Users\\walke\\Workspace\\EPortfolio\\XxDoomsdayxX.github.io\\index.html",
+              "RelativeToolTip": "index.html",
+              "ViewState": "AgIAAEgAAAAAAAAAAAAAAF8AAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-09-02T04:36:06.3Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -32,14 +49,14 @@
               "RelativeDocumentMoniker": "styles\\index-css.css",
               "ToolTip": "C:\\Users\\walke\\Workspace\\EPortfolio\\XxDoomsdayxX.github.io\\styles\\index-css.css",
               "RelativeToolTip": "styles\\index-css.css",
-              "ViewState": "AgIAAKwCAAAAAAAAAAAAAMgCAAAUAAAAAAAAAA==",
+              "ViewState": "AgIAALgCAAAAAAAAAAAAALkCAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
               "WhenOpened": "2025-09-02T03:53:20.14Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "page-not-found-css.css",
               "DocumentMoniker": "C:\\Users\\walke\\Workspace\\EPortfolio\\XxDoomsdayxX.github.io\\styles\\page-not-found-css.css",
               "RelativeDocumentMoniker": "styles\\page-not-found-css.css",
@@ -47,12 +64,11 @@
               "RelativeToolTip": "styles\\page-not-found-css.css",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-09-02T03:39:52.026Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-02T03:39:52.026Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "page-not-found.html",
               "DocumentMoniker": "C:\\Users\\walke\\Workspace\\EPortfolio\\XxDoomsdayxX.github.io\\page-not-found.html",
               "RelativeDocumentMoniker": "page-not-found.html",
