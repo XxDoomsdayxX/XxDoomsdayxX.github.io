@@ -17,7 +17,7 @@
         <h1 id="title">Travlr Getaways</h1>
         <p>A SNHU project courtesy of CS 465: Full Stack Development By: Prof. Wesley Dupeire</p>
         <section id="project-overview">
-            <img id="user-img-1" src="/images/user-travlr-1.PNG" alt="Image of the Users Main Site" />
+            <img id="user-img-1" src="images/user-travlr-1.PNG" alt="Image of the Users Main Site" />
             <div id="user-overview">
                 <h2>Project Overview - Client Website (Template)</h2>
                 <p>
@@ -153,7 +153,7 @@
                      Edit, or Delete controls and no admin toolbar; in this build clicking a card does nothing and does not open a detail page.
                      The only interactive items here are the header links like Travel, News, and Login. Content layout is responsive and the grid collapses
                      to two or one column on smaller screens." onclick="toggleDesc(this)">
-                    <img src="/images/admin-travlr-1.PNG" alt="3 column trips page" />
+                    <img src="images/admin-travlr-1.PNG" alt="3 column trips page" />
                 </div>
 
                 <div class="img-overlay" data-desc="Admin login for Travlr Getaways. Enter email and password to authenticate against the API.
@@ -161,7 +161,7 @@
                      On success the server returns a JWT; the app stores it for the session and adds it to requests so Admin pages like Trips add, edit, and delete unlock.
                      All traffic is over HTTPS and passwords are hashed on the server; logout clears the token and returns you to public pages.
                      Sign Up creates a new account with the same validation rules, and Forgot password starts a reset flow by email if configured." onclick="toggleDesc(this)">
-                    <img src="/images/login.PNG" alt="login page" />
+                    <img src="images/login.PNG" alt="login page" />
                 </div>
                 <div id="img-div-2">
                     <div class="img-overlay" data-desc="Admin Trips page while logged in. A three column grid lists destinations with photos and details.
@@ -169,14 +169,14 @@
                          price, nights, image, and summary. Delete asks for confirmation before removing the item.
                          Changes are saved through the API and the list updates immediately. The header shows Logout and admin navigation.
                          This is the full CRUD view staff use to maintain the trip catalog." onclick="toggleDesc(this)">
-                        <img src="/images/after-login.PNG" alt="Trips page after login" />
+                        <img src="images/after-login.PNG" alt="Trips page after login" />
                     </div>
                     <div class="img-overlay" data-desc="Add Trip admin form. Enter the trip code id, destination title, length of stay in nights and days,
                          and a start date using the date picker. Add the resort type, price per person, image file name, and a short description.
                          Required fields are validated; numbers must be positive and price must be a valid amount. When Save is pressed the app sends a
                          POST to the API to create the trip in MongoDB, then returns to the Trips list where the new card appears.
                          If validation fails or the server returns an error, clear messages display and the form stays filled so you can fix and resubmit." onclick="toggleDesc(this)">
-                        <img src="/images/add-trip.PNG" alt="Add trip page" />
+                        <img src="images/add-trip.PNG" alt="Add trip page" />
                     </div>
                 </div>
                 <div id="img-div-3">
@@ -184,14 +184,14 @@
                          Name, Length, Start date, Resort, and Per-Person price. Tabs (All, Beaches, Cruises, Mountains) narrow the list; the search box filters by name/ID,
                          and Add a Trip opens the create form. Each row has an Edit link that loads a prefilled form and a delete X that asks for confirmation
                          before removing the trip. Pagination controls appear at the bottom when there are more results." onclick="toggleDesc(this)">
-                        <img src="/images/travel-admin.PNG" alt="Admin Travel Page" />
+                        <img src="images/travel-admin.PNG" alt="Admin Travel Page" />
                     </div>
                     <div class="img-overlay" data-desc="Edit Trip admin form with all fields prefilled for the selected destination.
                          The ID is read only and serves as the unique key; you can update destination title, length of stay in nights and days,
                          start date via the date picker, resort, price per person, image file name, and the short description. Inputs are validated on the client and server;
                          errors show inline and the form keeps your data so you can fix and resubmit. Pressing Save sends a PUT request to the API to update the trip in MongoDB,
                          then returns to the list where the card reflects the new values. Delete is handled from the list view, not on this screen." onclick="toggleDesc(this)">
-                        <img src="/images/edit-trip.PNG" alt="Edit Trip Page" />
+                        <img src="images/edit-trip.PNG" alt="Edit Trip Page" />
                     </div>
                 </div>
                 <div id="img-div-4">
@@ -199,7 +199,7 @@
                          the top bar shows help, chat, and profile icons. The center panel displays a trip form with fields for ID, Destination, Length of Stay nights and days,
                          Start Date picker, Resort, and Per Person, plus a Save button. This page has no functionality right now and was implemented only to match the required design;
                          no API calls, validation, or navigation actions are wired and the controls are placeholders showing layout and intended workflow." onclick="toggleDesc(this)">
-                        <img src="/images/admin-page.PNG" alt="Admin Page" />
+                        <img src="images/admin-page.PNG" alt="Admin Page" />
                     </div>
                 </div>
             </div>
