@@ -283,7 +283,6 @@ hr {
         width: 100%;
         margin: 12px auto;
         touch-action: manipulation;
-        outline: 1px dashed lime;
     }
 
         #image-section .img-overlay img {
