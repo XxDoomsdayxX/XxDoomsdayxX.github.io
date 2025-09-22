@@ -1,0 +1,116 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    margin: 5px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    color: #333;
+}
+
+header {
+    display: flex;
+    margin: 5px;
+    padding: 5px;
+}
+
+    header a {
+        text-decoration: none;
+        font-weight: bold;
+        color: white;
+    }
+
+       header a:hover {
+            color: yellow;
+            text-decoration: underline;
+        }
+
+.source-link {
+    margin-left: auto;
+}
+
+#title {
+    margin: 5px;
+    padding: 5px;
+    font-size: 2rem;
+}
+
+#container {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    margin: 5px;
+    padding: 5px;
+}
+
+.device-frame {
+    display: block;
+}
+
+#device-screen {
+    position: absolute;
+    width: 260px;
+    height: 535px;
+    margin-top: 16px;
+    border-radius: 20px;
+    -webkit-overflow-scrolling: touch;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+}
+
+.device-content {
+    display: flex;
+    flex-direction: row;
+}
+    .device-content img {
+        width: 260px;
+        height: 535px;
+        border-radius: 20px;
+        scroll-snap-align: start;
+    }
+
+.nav-arrow {
+    position: absolute;
+    top: 50%;
+    border-radius: 100%;
+    border: none;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    background: rgba(0,0,0,0);
+    color: #fff;
+}
+    .nav-arrow:hover {
+        color: yellow;
+    }
+
+    .nav-arrow:disabled {
+        opacity: 0.35;
+        cursor: default;
+    }
+
+.nav-left {
+    left: 37%;
+}
+
+.nav-right {
+    right: 37%;
+}
+
+
+/* Footer */
+#copy {
+    color: red;
+    text-align: center;
+    width: 100%;
+}
