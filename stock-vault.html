@@ -1,0 +1,40 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Stock Vault</title>
+    <link rel="stylesheet"  href="styles/stock-vault-css.css" type="text/css"/>
+</head>
+
+<body>
+    <header>
+        <a href="/index.html" id="page-top" class="back-link">< Back</a>
+        <a href="https://github.com/XxDoomsdayxX/StockVault/tree/master" class="source-link" target="_blank">Source Code</a>
+    </header>
+
+    <main>
+        <div id="title">
+            <p>Stock Vault(Java/Android)</p>
+        </div>
+        <div id="container">
+            <img src="/images/smartphone.png" alt="Smartphone Container" class="device-frame" />
+            <button class="nav-arrow nav-left" aria-label="Previous screen" onclick="slideLeft()">&#10094;</button>
+            <div id="device-screen">
+                <div class="device-content">
+                    <img src="/images/loading-logo.png" alt="Loading Logo" />
+                    <img src="/images/login-screen.png" alt="Login Screen" />
+                    <img src="/images/register-screen.png" alt="Register Screen" />
+                    <img src="/images/inventory-screen.png" alt="Inventory Screen" />
+                    <img src="/images/notification-screen.png" alt="Notification Screen" />
+                </div>
+            </div>
+            <button class="nav-arrow nav-right" aria-label="Next screen" onclick="slideRight()">&#10095;</button>
+        </div>
+    </main>
+
+    <footer>
+        <p id="copy">&copy; <span id="year">2025</span> Darrell Walker All rights reserved.</p>
+    </footer>
+
+    <script defer src="scripts/stockvault-script.js"></script>
+</body>
+
+</html>

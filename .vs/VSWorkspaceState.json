@@ -1,8 +1,10 @@
 {
   "ExpandedNodes": [
     "",
+    "\\images",
+    "\\scripts",
     "\\styles"
   ],
-  "SelectedNode": "\\travlr-project-page.html",
+  "SelectedNode": "\\scripts\\stockvault-script.js",
   "PreviewInSolutionExplorer": false
 }
