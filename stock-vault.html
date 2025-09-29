@@ -1,7 +1,8 @@
-<html xmlns="http://www.w3.org/1999/xhtml">
+﻿<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title>Stock Vault</title>
-    <link rel="stylesheet"  href="styles/stock-vault-css.css" type="text/css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles/stock-vault-css.css" type="text/css" />
 </head>
 
 <body>
@@ -11,22 +12,346 @@
     </header>
 
     <main>
-        <div id="title">
-            <p>Stock Vault(Java/Android)</p>
+        <div id="section1">
+            <div id="title">
+                <p>Stock Vault(Java/Android)</p>
+            </div>
+            <div id="container">
+                <img src="/images/smartphone.png" alt="Smartphone Container" class="device-frame" />
+                <button class="nav-arrow nav-left" aria-label="Previous screen" onclick="slideLeft()">&#10094;</button>
+                <div id="device-screen">
+                    <div class="device-content">
+                        <img src="/images/loading-logo.png" alt="Loading Logo" />
+                        <img src="/images/login-screen.png" alt="Login Screen" />
+                        <img src="/images/register-screen.png" alt="Register Screen" />
+                        <img src="/images/inventory-page.png" alt="Inventory Screen" />
+                        <img src="/images/inventory-search.png" alt="Inventory Search" />
+                        <img src="/images/notification-screen.png" alt="Notification Screen" />
+                    </div>
+                </div>
+                <button class="nav-arrow nav-right" aria-label="Next screen" onclick="slideRight()">&#10095;</button>
+            </div>
         </div>
-        <div id="container">
-            <img src="/images/smartphone.png" alt="Smartphone Container" class="device-frame" />
-            <button class="nav-arrow nav-left" aria-label="Previous screen" onclick="slideLeft()">&#10094;</button>
-            <div id="device-screen">
-                <div class="device-content">
-                    <img src="/images/loading-logo.png" alt="Loading Logo" />
-                    <img src="/images/login-screen.png" alt="Login Screen" />
-                    <img src="/images/register-screen.png" alt="Register Screen" />
-                    <img src="/images/inventory-screen.png" alt="Inventory Screen" />
-                    <img src="/images/notification-screen.png" alt="Notification Screen" />
+        <div id="section2">
+            <div class="details">
+                <h1>Description:</h1>
+                <p>
+                    StockVault is a lightweight Android app that helps students, hobbyists, and small teams keep track of stock on hand without the complexity of a full ERP system.
+                    It focuses on the things people do most: add items, adjust quantities and prices, find what they need quickly, and get alerted before they run out or forget
+                    about aging items.
+                </p>
+                <p>
+                    Completed as part of my personal graduation project for CS-499 Computer Science Capstone at Sothern New Hampshire University.
+                </p>
+            </div>
+            <div class="details">
+                <h1>What problems it solves:</h1>
+                <p>Staying ahead of shortages: Surfaces the items that are closest to their low-stock thresholds so you can restock in time.</p>
+                <p>Finding items fast: Lets you search even with typos (“milk” vs “mikl”) and filters the list as you type.</p>
+                <p>Editing in context: Update quantity or price right where you see it—no extra screens or forms.</p>
+            </div>
+        </div>
+        <div id="section3">
+            <div id="container2">
+                <div class="feature">
+                    <h3>Feature One</h3>
+                    <h4>Smart Inventory Engine</h4>
+                    <ul>
+                        <li>Restock-priority sorting: Items are ranked by urgency (quantity minus low-stock threshold), then by age (older first), then by name. This ensures the most important items float to the top.</li>
+                        <li>Live fuzzy search: A small, optimized edit-distance function powers typo-tolerant search. Results update after a short debounce (≈300 ms) so filtering feels instant without janky reflows.</li>
+                        <li>Fast UI updates: The app keeps an in-memory list of items. When you edit or add an item, it updates the list, re-sorts, and re-renders no full database reload.</li>
+                    </ul>
+                </div>
+                <div class="feature">
+                    <h3>Feature Two</h3>
+                    <h4>Per-Item Alerts & Preferences</h4>
+                    <ul>
+                        <li>Aging alerts: Optional date-based notifications remind you when items have been sitting too long (e.g., 30+ days).</li>
+                        <li>Android-native notifications: Uses a dedicated notification channel and supports Android 13 permission flow. Tapping a notification takes you right back into the app.</li>
+                        <li>Settings screen per item to enable/disable SMS-style alerts and set thresholds.</li>
+                    </ul>
+                </div>
+                <div class="feature">
+                    <h3>Feature Three</h3>
+                    <h4>Inline Editing with Reliable Persistence</h4>
+                    <ul>
+                        <li>Long-press to edit quantity or price directly in the list.</li>
+                        <li>Changes persist to SQLite via a repository layer, then auto re-sort and re-render.</li>
+                        <li>Safer parsing/validation and clear user feedback (toasts/logs) on every action.</li>
+                    </ul>
                 </div>
             </div>
-            <button class="nav-arrow nav-right" aria-label="Next screen" onclick="slideRight()">&#10095;</button>
+        </div>
+        <div id="section4">
+            <h1>How it works (under the hood)</h1>
+            <div id="container3">
+                <div class="feature">
+                    <h3>Platform & storage</h3>
+                    <ul>
+                        <li>Android + SQLite: Data lives locally for speed and offline use. A SQLiteOpenHelper (InventoryDatabase) manages schema creation and migrations.</li>
+                        <li>Schema highlights: inventory table tracks name, quantity, price, date added, and per-item notification prefs (threshold, alert toggles).</li>
+                        <li>SharedPreferences: Item-specific notification settings are saved per ID. Basic user info (e.g., name displayed in greetings) is cached for UX.</li>
+                    </ul>
+                </div>
+                <div class="feature">
+                    <h3>Algorithms & data structures</h3>
+                    <ul>
+                        <li>Restock comparator: Custom comparator ranks items by (quantity − threshold), then by age, then by name—simple, stable, and effective.</li>
+                        <li>Fuzzy search: An efficient edit-distance function (dynamic programming) handles short strings like item names. It runs only on the in-memory list after a debounce to keep typing smooth.</li>
+                        <li>In-memory cache: The full item list is stored in memory, then filtered/sorted for rendering. This keeps UI snappy and reduces DB churn.</li>
+                    </ul>
+                </div>
+                <div class="feature">
+                    <h3>Notifications</h3>
+                    <ul>
+                        <li>Channels & permissions: Creates a channel on Android 8+ and requests POST_NOTIFICATIONS on Android 13+.</li>
+                        <li>Tap-through: Notifications include a PendingIntent that opens InventoryActivity.</li>
+                        <li>When they fire: Checks run on list refresh (add/edit/delete/return to screen). A background scheduler (e.g., WorkManager) can be added later if needed.</li>
+                    </ul>
+                </div>
+                <div class="feature">
+                    <h3>UX details that matter</h3>
+                    <ul>
+                        <li>One-tap add: Quick form for name, qty, and price; date auto-filled.</li>
+                        <li>Inline validation: Clear messages if fields are empty or invalid.</li>
+                        <li>No surprises: After each change, the list re-sorts and the user sees the result immediately.</li>
+                    </ul>
+                </div>
+                <div class="feature">
+                    <h3>Security & privacy notes</h3>
+                    <ul>
+                        <li>Local-first design: All data is stored on device. No network by default.</li>
+                        <li>Credentials: The current flow is demo-level (plain text in local DB). A production build would hash passwords, enforce stronger auth, and consider biometric unlock.</li>
+                        <li>Permissions: Only requests notification permission when needed.</li>
+                    </ul>
+                </div>
+                <div class="feature">
+                    <h3>Performance choices</h3>
+                    <ul>
+                        <li>Debounced text input reduces needless filtering while typing.</li>
+                        <li>Single-pass edit distance is used for short names—fast enough for mobile lists.</li>
+                        <li>Selective redraws: Edits update the in-memory model and re-render the visible list.</li>
+                    </ul>
+                </div>
+                <div class="feature">
+                    <h3>Testing & reliability</h3>
+                    <ul>
+                        <li>Manual smoke tests: Add, edit, delete, and search paths verified across Android versions, including notification permission behavior.</li>
+                        <li>Logging: Targeted Log.d/Log.e statements help trace insert/update/notify flows during development.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="section5">
+            <h1>Enhancement Process - Before & After</h1>
+            <div class="container4">
+                <div class="title">
+                    <p>1.)  Search: exact match &rarr; fuzzy, debounced filtering</p>
+                </div>
+                <div class="before">
+                    <h3>Before (exact, no debounce – brittle & jumpy on large lists)</h3>
+                    <pre>
+                    <code class="language-java">
+                            searchField.addTextChangedListener(new TextWatcher() {
+                                public void onTextChanged(CharSequence s, int start, int before, int count) {
+                                    String q = s.toString().toLowerCase();
+                                    List<Item> show = new ArrayList<>();
+                                    for (Item it : allItems) {
+                                        if (it.name.toLowerCase().contains(q)) show.add(it);
+                                    }
+                                    renderRows(show); // runs every keystroke
+                                }
+                                public void beforeTextChanged(CharSequence s, int a, int b, int c) {}
+                                public void afterTextChanged(Editable s) {}
+                            });
+                        </code>
+                    </pre>
+                </div>
+                <div class="after">
+                    <h3>After (fuzzy search + debounce – smooth & typo-tolerant)</h3>
+                    <pre>
+                    <code class="language-java">
+                            private static final long SEARCH_DEBOUNCE_MS = 300L;
+                            private final Handler searchHandler = new Handler(Looper.getMainLooper());
+                            private Runnable searchTask = null;
+                            private String lastQuery = "";
+
+                            searchField.addTextChangedListener(new TextWatcher() {
+                                public void onTextChanged(CharSequence s, int start, int before, int count) {
+                                    if (searchTask != null) searchHandler.removeCallbacks(searchTask);
+                                    final String q = s.toString().trim();
+                                    searchTask = () -> { if (!q.equals(lastQuery)) { lastQuery = q; filterAndRender(q); } };
+                                    searchHandler.postDelayed(searchTask, SEARCH_DEBOUNCE_MS);
+                                }
+                                public void beforeTextChanged(CharSequence s, int a, int b, int c) {}
+                                public void afterTextChanged(Editable s) {}
+                            });
+
+                            // Inside filterAndRender(...)
+                            int dist = editDistance(qLower, nameLower);
+                            boolean matches = nameLower.contains(qLower) || dist <= 2;
+                        </code>
+                    </pre>
+                </div>
+            </div>
+            <p>Result: Faster feel while typing, better matches with minor typos, fewer unnecessary UI redraws.</p>
+        </div>
+        <hr />
+        <div id="section6">
+            <div class="container4">
+                <div class="title">
+                    <p>2.)  Sorting: “added order” &rarr; restock-priority comparator</p>
+                </div>
+                <div class="before">
+                    <h3>Before (implicit: whatever order the DB returned)</h3>
+                    <pre>
+                    <code class="language-java">
+                            Cursor c = db.query("inventory", null, null, null, null, null, null);
+                            // render in cursor order
+                        </code>
+                    </pre>
+                </div>
+                <div class="after">
+                    <h3>After (urgent items first, then age, then name)</h3>
+                    <pre>
+                    <code class="language-java">
+                            Collections.sort(allItems, (a, b) -> {
+                                int ua = a.quantity - a.lowStockThreshold;
+                                int ub = b.quantity - b.lowStockThreshold;
+                                int byUrgency = Integer.compare(ua, ub);        // lower margin = more urgent
+                                if (byUrgency != 0) return byUrgency;
+                                int byAge = Integer.compare(daysSince(b.date), daysSince(a.date)); // older = higher priority
+                                if (byAge != 0) return byAge;
+                                return a.name.compareToIgnoreCase(b.name);
+                            });
+                        </code>
+                    </pre>
+                </div>
+            </div>
+            <p>Result: The most critical items bubble to the top so restocking decisions are immediate and obvious.</p>
+        </div>
+        <hr />
+        <div id="section6">
+            <div class="container4">
+                <div class="title">
+                    <p>3.)  Notifications: global toggles &rarr; per-item preferences</p>
+                </div>
+                <div class="before">
+                    <h3>Before (one-size-fits-all)</h3>
+                    <pre>
+                    <code class="language-java">
+                            SharedPreferences sp = getSharedPreferences("Notif", MODE_PRIVATE);
+                            boolean enableSms = sp.getBoolean("enableSms", false); // global
+                            int threshold = sp.getInt("threshold", 5);              // global for all items
+                        </code>
+                    </pre>
+                </div>
+                <div class="after">
+                    <h3>After (per item ID)</h3>
+                    <pre>
+                    <code class="language-java">
+                            SharedPreferences perItem = getSharedPreferences("ItemNotificationPreferences", MODE_PRIVATE);
+                            boolean enableSms = perItem.getBoolean("enableSms_" + itemId, false);
+                            int lowStockThreshold = Integer.parseInt(perItem.getString("threshold_" + itemId, "5"));
+                            boolean enableDateNotification = perItem.getBoolean("enableDateNotification_" + itemId, false);
+                            int dateThresholdDays = Integer.parseInt(perItem.getString("dateThreshold_" + itemId, "30"));
+                        </code>
+                    </pre>
+                </div>
+            </div>
+            <p>Result: Users can tailor alerts per item (e.g., rice at 5, batteries at 2, milk with a 7-day age warning). Fewer noisy notifications, more signal.</p>
+        </div>
+        <hr />
+        <div id="section6">
+            <div class="container4">
+                <div class="title">
+                    <p>4.)  Editing: multi-screen forms &rarr; inline edits with instant resort</p>
+                </div>
+                <div class="before">
+                    <h3>Before (navigate away, edit, save, come back)</h3>
+                    <pre>
+                    <code class="language-java">
+                            row.setOnClickListener(v -> {
+                                Intent i = new Intent(this, EditItemActivity.class);
+                                i.putExtra("id", it.id);
+                                startActivity(i);
+                            });
+                        </code>
+                    </pre>
+                </div>
+                <div class="after">
+                    <h3>After (long-press cell &rarr; inline edit &rarr; persist &rarr; resort and re-render)</h3>
+                    <pre>
+                    <code class="language-java">
+                            qtyView.setOnLongClickListener(v -> {
+                                EditText editQty = new EditText(this);
+                                editQty.setText(String.valueOf(it.quantity));
+                                row.removeView(qtyView);
+                                row.addView(editQty, 1);
+
+                                editQty.setOnEditorActionListener((v1, aId, ev) -> {
+                                    int newQty = safeInt(editQty.getText().toString(), -1);
+                                    if (newQty < 0) { toast("Enter a valid quantity."); return true; }
+
+                                    repo.updateItem(it.id, it.name, newQty, it.price, it.date,
+                                                    it.lowStockThreshold, it.enableSms, it.enableDateNotification);
+
+                                    it.quantity = newQty;                // update in-memory
+                                    row.removeView(editQty);
+                                    row.addView(qtyView, 1);
+                                    qtyView.setText(String.valueOf(newQty));
+
+                                    reSortAndRender();                   // instant resort + refresh
+                                    return true;
+                                });
+                                return true;
+                            });
+                        </code>
+                    </pre>
+                </div>
+            </div>
+            <p>Result: Quick edits in place, no extra navigation, and the list instantly reorders to reflect urgency.</p>
+        </div>
+        <hr />
+        <div id="section6">
+            <div class="container4">
+                <div class="title">
+                    <p>5.)  Rendering: full reloads &rarr; targeted refresh with in-memory model</p>
+                </div>
+                <div class="before">
+                    <h3>Before</h3>
+                    <pre>
+                        <code class="language-java">
+                            updateItem(...){
+                            db.update(...);
+                            loadInventoryItems(); // re-query everything and rebuild the UI
+                            }
+                        </code>
+                    </pre>
+                </div>
+                <div class="after">
+                    <h3>After</h3>
+                    <pre>
+                        <code class="language-java">
+                            updateItem(...){
+                            db.update(...);     // persist
+                            it.quantity = newQty; // update in-memory model
+                            reSortAndRender();  // resort + render currently visible rows only
+                            }
+                        </code>
+                    </pre>
+                </div>
+            </div>
+            <p>Result: Snappier UI and less database churn-especially noticeable on lower-end devices.</p>
+        </div>
+        <hr />
+        <div id="database">
+            <h1>Database</h1>
+            <h3>Coming Soon</h3>
+        </div>
+        <div id="last-section">
+            <p>For more information and details, Please visit the <a href="https://github.com/XxDoomsdayxX/StockVault/tree/main">Source page</a> to view the README.md</p>
+            <p><b>NOTE:</b>This project was designed and created by me as my first Java/Android Project.</p>
         </div>
     </main>
 
