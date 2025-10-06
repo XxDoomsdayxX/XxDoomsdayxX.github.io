@@ -346,8 +346,78 @@
         </div>
         <hr />
         <div id="database">
-            <h1>Database</h1>
-            <h3>Coming Soon</h3>
+            <div id="database-intro">
+                <h1>Database</h1>
+                <p><b>Stack:</b> SQLite (SQLiteOpenHelper) + SharedPreferences (per-item alert toggles).</p>
+                <p><b>Why:</b> Fast, offline-first storage with simple, reliable reads/writes.</p>
+            </div>
+            
+            <div id="database-section2">
+                <div class="db-sec2">
+                    <h3>Schema (minimal)</h3>
+                    <pre>
+                        <code>
+                            CREATE TABLE items (
+                                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                                name TEXT NOT NULL,
+                                quantity INTEGER NOT NULL DEFAULT 0,
+                                low_stock_threshold INTEGER NOT NULL DEFAULT 5,
+                                price REAL NOT NULL DEFAULT 0,
+                                date_added INTEGER NOT NULL,
+                                last_updated INTEGER NOT NULL
+                            );
+
+                            CREATE TABLE item_prefs (
+                                item_id INTEGER PRIMARY KEY REFERENCES items(id) ON DELETE CASCADE,
+                                enable_qty_alert INTEGER NOT NULL DEFAULT 0,
+                                enable_age_alert INTEGER NOT NULL DEFAULT 0,
+                                age_days_threshold INTEGER NOT NULL DEFAULT 30
+                            );
+                        </code>
+                    </pre>
+                </div>
+                <div class="db-sec2">
+                    <div>
+                        <h3>Restock order (urgent → older → name)</h3>
+                        <pre>
+                            <code>
+                                SELECT * FROM items
+                                ORDER BY (quantity - low_stock_threshold) ASC,
+                                    (strftime('%s','now') - date_added) DESC,
+                                    name COLLATE NOCASE ASC;
+                            </code>
+                        </pre>
+                    </div>
+                    <div>
+                        <h3>Low-stock filter</h3>
+                        <pre>
+                            <code>
+                                SELECT id,name,quantity,low_stock_threshold
+                                FROM items
+                                WHERE quantity <= low_stock_threshold;
+                            </code>
+                        </pre>
+                    </div>
+                </div>
+            </div>
+            <div id="db-section3">
+                <div class="db-s3">
+                    <h3>Data flow & reliability</h3>
+                    <ul>
+                        <li>Load rows → keep an in-memory list for instant sort/filter.</li>
+                        <li>Inline edits: transactional UPDATE, then resort & re-render visible rows.</li>
+                        <li>Basic constraints + defaults prevent bad data (e.g., negative qty).</li>
+                    </ul>
+                </div>
+                <div class="db-s3">
+                    <h3>Small roadmap</h3>
+                    <ul>
+                        <li>Move to Room DAOs & migrations.</li>
+                        <li>Add FTS5 for larger, typo-tolerant search.</li>
+                        <li>One-tap CSV export/import; optional SQLCipher encryption.</li>
+                    </ul>
+                </div>
+            </div>
         </div>
         <div id="last-section">
             <p>For more information and details, Please visit the <a href="https://github.com/XxDoomsdayxX/StockVault/tree/main">Source page</a> to view the README.md</p>
