@@ -172,6 +172,12 @@ header {
         width: 30%;
     }
 
+pre {
+    text-align: left;
+    width: max-content;
+    margin: 0 auto;
+}
+
 #container3 {
     display: flex;
     flex-wrap: wrap;
@@ -253,6 +259,43 @@ hr {
     color: white;
     text-align: center;
     padding: 20px 0;
+}
+
+#database-section2 {
+    display: flex;
+    gap: 20px;
+    justify-content: space-evenly;
+    padding: 10px;
+}
+
+.db-sec2 {
+    box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.1);
+    flex: 1 0 30%;
+    margin: 5px;
+    text-align: center;
+}
+
+    .db-sec2 pre {
+        text-align: left;
+        margin: 0px 40px;
+        width: max-content;
+    }
+
+#db-section3 {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    width: 100%;
+    padding: 10px;
+}
+    #db-section3 h3 {
+        text-align: center;
+    }
+
+.db-s3 {
+    width: 40%;
+    margin: 0 auto;
+    text-align: left;
 }
 
 #last-section {
