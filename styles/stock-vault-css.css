@@ -418,11 +418,31 @@ hr {
         padding: 10px 12px;
     }
 
-    /* Final sections */
-    #database,
-    #last-section {
-        padding: 24px 12px;
+    #database-section2,
+    #db-section3 {
+        flex-direction: column;
+        gap: 12px;
+        padding: 0 12px;
     }
+
+    .db-sec2,
+    .db-s3 {
+        flex: 1 1 auto;
+        width: 100%;
+        margin: 0;
+        text-align: left;
+    }
+
+        .db-sec2 pre {
+            margin: 0;
+            padding: 12px;
+            max-width: 100%;
+            box-sizing: border-box;
+            overflow-x: auto;
+            white-space: pre;
+            font-size: 0.9rem;
+        }
+
 
     /* Footer */
     #copy {
