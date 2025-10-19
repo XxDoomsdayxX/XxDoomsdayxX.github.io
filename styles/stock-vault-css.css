@@ -322,8 +322,9 @@ hr {
     padding: 40px;
 }
 
-    #video-sec video {
-        width: 60%;
+    #video-sec .video {
+        width: 1000px;
+        height: 600px;
     }
 
 #enhancements {
