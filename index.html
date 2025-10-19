@@ -59,7 +59,7 @@
                         Java, C++, JavaScript, HTML, CSS, and experience working with tools such as Node.js, Express, MongoDB, and Git.
                         <br />
                         <br />
-                        &emsp; Throughout my academic and personal projects, I’ve focused on writing clean, efficient, and secure code, building scalable applications, and solving real-world problems through technology.
+                        &emsp; Throughout my academic and personal projects, I’ve focused on writing clean, efficient, and secure code, building scalable applications, and solving real-world problems through technology such as Raspberry Pi/Arduino.
                         Whether I’m collaborating on a team or developing independently, I bring strong problem-solving skills, a continuous learning mindset, and a passion for delivering quality software.
                         <br />
                         <br />
@@ -67,7 +67,7 @@
                     </p>
                     
                 </div>
-                <a href="page-not-found.html" class="more-btn">More</a>
+                <a href="about.html" class="more-btn">More</a>
             </section>
             <aside id="skills" class="card" aria-labelledby="skills-heading">
                 <h2 id="skills-heading" class="center">Skills:</h2>
@@ -82,6 +82,43 @@
                   <li><span class="skill-name">MongoDB</span> <meter min="0" max="10" value="3.5" aria-label="MongoDB proficiency 3.5 out of 10">3.5/10</meter></li>
                 </ul>
             </aside>
+        </div>
+
+        <div class="assessment card">
+            <h2>Professional Self-Assessment:</h2>
+            <p>
+                Completing the SNHU Computer Science program and building this ePortfolio pushed me to turn classroom skills into working software.
+                Across the capstone I designed, built, and refined StockVault, an Android inventory app that runs fully offline on SQLite.
+                Turning an early CRUD list into a smooth product—inline edits, typo-tolerant search, and per-item alerts—helped me showcase strengths I’ll bring to a team:
+                clear problem framing, iterative improvement, and shipping reliable code.
+            </p>
+            <h3>Strengths, goals, and values.</h3>
+            <p>
+                I value simple designs that solve real problems and are easy to maintain. My goals are to grow as a full-stack/Android engineer and to keep security and
+                usability as non-negotiables. Outside class, I prototype hardware + software (Raspberry Pi/Arduino voice-controlled toolbox), which keeps me curious and hands-on.
+            </p>
+            <h3>How I work with others.</h3>
+            <p>
+                1.) <b>Collaborating in teams:</b> In course projects I split work into small, testable tasks, used Git branching, and wrote clear PR notes so teammates could review quickly.<br />
+                2.) <b>Communicating with stakeholders:</b> I summarize trade-offs in plain language (performance vs. complexity, on-device vs. cloud) and show short demos so decisions are based on behavior, not theory.
+            </p>
+            <h3>Core CS skills I apply.</h3>
+            <p>
+                1.) <b>Data structures & algorithms:</b> In StockVault I used an in-memory list with a custom restock comparator (quantity–threshold &rarr; age &rarr; name) and a lightweight edit-distance search with debounce for smooth typing. These choices kept operations O(n) and responsive on mobile.<br />
+                2.) <b>Software engineering & databases:</b> I designed a minimal SQLite schema (items, item_prefs), wrapped writes in transactions, added indexes, and separated UI from data with a repository layer. I plan to migrate to Room + DataStore for type-safe DAOs and easier migrations.<br />
+                3.) <b>Security:</b> I practice least-privilege permissions (Android 13 notifications), input validation, and local-first storage. A production build would add credential hashing/biometric, a privacy policy, and optional SQLCipher encryption.
+            </p>
+            <h3>How the artifacts fit together.</h3>
+            <p>
+                1.) <b>Software Design & Engineering:</b> shows UI/UX improvements and code structure (inline editing, repo layer, notification channel).<br />
+                2.) <b>Algorithms & Data Structures:</b> explains the ranking/search choices that make the app feel fast.<br />
+                3.) <b>Database:</b> documents the schema, integrity rules, and migration approach that make data reliable.
+            </p>
+            <p>
+                Together, these artifacts demonstrate the full path from problem to product: requirements &rarr; design &rarr; algorithms &rarr; data layer &rarr;
+                user experience &rarr; release-readiness. They also reflect how I work-start simple, measure, refine, and leave the codebase cleaner than I found it.
+                I’m ready to contribute those habits and skills on a professional team.
+            </p>
         </div>
 
         <div id="section2" class="section projects-wrapper">

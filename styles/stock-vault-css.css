@@ -4,37 +4,42 @@
 
 html {
     scroll-behavior: smooth;
-    margin: 5px;
 }
 
 body {
     font-family: Arial, sans-serif;
+    position: relative;
     margin: 0;
     padding: 0;
-    background-color: #000000;
+    background-image: url("../images/endless-constellation.svg");
+    background-repeat: repeat;
+    background-size: 100%;
     color: #333;
+    z-index: -1;
 }
 
 header {
-    display: flex;
     margin: 5px;
     padding: 5px;
 }
 
-    header a {
+.header-links {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+    .header-links .btn {
         text-decoration: none;
         font-weight: bold;
         color: white;
     }
 
-       header a:hover {
-            color: yellow;
-            text-decoration: underline;
-        }
+    .header-links a:hover {
+        color: #0f0;
+        text-decoration: none;
+    }
 
-.source-link {
-    margin-left: auto;
-}
 
 #section1 {
     height: 100vh;
@@ -46,6 +51,12 @@ header {
     font-size: 2.75rem;
     color: black;
     text-shadow: 1px 2px 3px #ffffff;
+}
+
+#p1 {
+    width: 100%;
+    text-align: center;
+    padding-bottom: 20px;
 }
 
 #container {
@@ -143,9 +154,9 @@ header {
     padding: 5px;
     width: 30%;
     border-radius: 10px;
-    background-color: #000000;
     box-shadow: 0px 0px 7px rgba(255, 255, 255, 0.1);
     color: white;
+    background-color: #000000;
 }
 
 .feature h3 {
@@ -159,9 +170,9 @@ header {
     }
 
 #section4 {
-    background-color: #000000;
     margin: 100px auto;
     padding: 5px;
+    z-index: 1;
 }
 
     #section4 h1 {
@@ -273,6 +284,7 @@ hr {
     flex: 1 0 30%;
     margin: 5px;
     text-align: center;
+    background-color: rgb(0, 0, 0);
 }
 
     .db-sec2 pre {
@@ -296,6 +308,37 @@ hr {
     width: 40%;
     margin: 0 auto;
     text-align: left;
+    padding-bottom: 40px;
+}
+
+#snhu {
+    text-align: center;
+    color: white;
+    padding: 40px;
+}
+
+#video-sec {
+    text-align: center;
+    padding: 40px;
+}
+
+    #video-sec video {
+        width: 60%;
+    }
+
+#enhancements {
+    display: flex;
+    flex-direction: column;
+    gap: 150px;
+    padding: 20px;
+}
+    #enhancements h3 {
+        text-decoration: underline;
+        padding-bottom: 20px;
+    }
+
+.enhancement {
+    text-align: left;
 }
 
 #last-section {
@@ -316,6 +359,12 @@ hr {
     header {
         gap: 8px;
         align-items: center;
+    }
+
+    .header-links {
+        margin: 8px 12px 14px;
+        justify-content: flex-start;
+        gap: 15px;
     }
 
     #title {

@@ -7,8 +7,13 @@
 
 <body>
     <header>
-        <a href="/index.html" id="page-top" class="back-link">< Back</a>
-        <a href="https://github.com/XxDoomsdayxX/StockVault/tree/master" class="source-link" target="_blank">Source Code</a>
+        <nav class="header-links" aria-label="StockVault resources">
+            <a href="/index.html" id="page-top" class="btn">< Back</a>
+            <a class="btn" href="https://github.com/XxDoomsdayxX/StockVault/tree/enhancement_three" target="_blank" rel="noopener">Source</a>
+            <a class="btn" href="https://github.com/XxDoomsdayxX/StockVault#readme" target="_blank" rel="noopener">README</a>
+            <a class="btn" href="#section5" rel="noopener">Enhancement Process</a>
+            <a class="btn" href="#database" rel="noopener">Database</a>
+        </nav>
     </header>
 
     <main>
@@ -16,6 +21,7 @@
             <div id="title">
                 <p>Stock Vault(Java/Android)</p>
             </div>
+            <p id="p1">Android app to track inventory with typo-tolerant search, restock priority, and per-item alerts.</p>
             <div id="container">
                 <img src="/images/smartphone.png" alt="Smartphone Container" class="device-frame" />
                 <button class="nav-arrow nav-left" aria-label="Previous screen" onclick="slideLeft()">&#10094;</button>
@@ -25,8 +31,16 @@
                         <img src="/images/login-screen.png" alt="Login Screen" />
                         <img src="/images/register-screen.png" alt="Register Screen" />
                         <img src="/images/inventory-page.png" alt="Inventory Screen" />
+                        <img src="/images/settings.png" alt="Inventory Screen w/settings" />
                         <img src="/images/inventory-search.png" alt="Inventory Search" />
                         <img src="/images/notification-screen.png" alt="Notification Screen" />
+                        <img src="/images/loading-logo.png" alt="Loading Logo" />
+                        <img src="/images/dark-login-screen.png" alt="Login Screen" />
+                        <img src="/images/dark-register-screen.png" alt="Register Screen" />
+                        <img src="/images/dark-inventory-page.png" alt="Inventory Screen" />
+                        <img src="/images/dark-settings.png" alt="Inventory Screen w/settings" />
+                        <img src="/images/dark-inventory-search.png" alt="Inventory Search" />
+                        <img src="/images/dark-notification-screen.png" alt="Notification Screen" />
                     </div>
                 </div>
                 <button class="nav-arrow nav-right" aria-label="Next screen" onclick="slideRight()">&#10095;</button>
@@ -36,19 +50,20 @@
             <div class="details">
                 <h1>Description:</h1>
                 <p>
-                    StockVault is a lightweight Android app that helps students, hobbyists, and small teams keep track of stock on hand without the complexity of a full ERP system.
-                    It focuses on the things people do most: add items, adjust quantities and prices, find what they need quickly, and get alerted before they run out or forget
-                    about aging items.
+                    StockVault is a lightweight Android (Java) app for tracking inventory.
+                    You can add items, edit quantity and price, search with typos, and get alerts before you run out.
+                    Data is saved locally in SQLite so it works offline and stays private.
                 </p>
                 <p>
-                    Completed as part of my personal graduation project for CS-499 Computer Science Capstone at Sothern New Hampshire University.
+                    Completed as part of my personal graduation project for CS-499 Computer Science Capstone at Southern New Hampshire University.
                 </p>
             </div>
             <div class="details">
-                <h1>What problems it solves:</h1>
-                <p>Staying ahead of shortages: Surfaces the items that are closest to their low-stock thresholds so you can restock in time.</p>
+                <h1>Problems StockVault Solves:</h1>
+                <p>Restocking on time: Surfaces items closest to their low-stock thresholds so you know what to buy next.</p>
                 <p>Finding items fast: Lets you search even with typos (“milk” vs “mikl”) and filters the list as you type.</p>
-                <p>Editing in context: Update quantity or price right where you see it—no extra screens or forms.</p>
+                <p>Editing without friction: Long-press to edit right in the list—no extra screens or forms.</p>
+                <p>Works offline: Local storage keeps the app quick and usable anywhere.</p>
             </div>
         </div>
         <div id="section3">
@@ -90,7 +105,7 @@
                     <ul>
                         <li>Android + SQLite: Data lives locally for speed and offline use. A SQLiteOpenHelper (InventoryDatabase) manages schema creation and migrations.</li>
                         <li>Schema highlights: inventory table tracks name, quantity, price, date added, and per-item notification prefs (threshold, alert toggles).</li>
-                        <li>SharedPreferences: Item-specific notification settings are saved per ID. Basic user info (e.g., name displayed in greetings) is cached for UX.</li>
+                        <li>SQLite item_prefs table stores per-item alert settings (ID-keyed). SharedPreferences/DataStore is used only for lightweight UI state.</li>
                     </ul>
                 </div>
                 <div class="feature">
@@ -121,7 +136,7 @@
                     <h3>Security & privacy notes</h3>
                     <ul>
                         <li>Local-first design: All data is stored on device. No network by default.</li>
-                        <li>Credentials: The current flow is demo-level (plain text in local DB). A production build would hash passwords, enforce stronger auth, and consider biometric unlock.</li>
+                        <li>No remote auth; the login shown is demo-only for UI. A production build would hash credentials (or use Google/biometric) and include a privacy policy.</li>
                         <li>Permissions: Only requests notification permission when needed.</li>
                     </ul>
                 </div>
@@ -321,7 +336,7 @@
                 <div class="before">
                     <h3>Before</h3>
                     <pre>
-                        <code class="language-java">
+                    <code class="language-java">
                             updateItem(...){
                             db.update(...);
                             loadInventoryItems(); // re-query everything and rebuild the UI
@@ -332,7 +347,7 @@
                 <div class="after">
                     <h3>After</h3>
                     <pre>
-                        <code class="language-java">
+                    <code class="language-java">
                             updateItem(...){
                             db.update(...);     // persist
                             it.quantity = newQty; // update in-memory model
@@ -351,12 +366,12 @@
                 <p><b>Stack:</b> SQLite (SQLiteOpenHelper) + SharedPreferences (per-item alert toggles).</p>
                 <p><b>Why:</b> Fast, offline-first storage with simple, reliable reads/writes.</p>
             </div>
-            
+
             <div id="database-section2">
                 <div class="db-sec2">
                     <h3>Schema (minimal)</h3>
                     <pre>
-                        <code>
+                    <code>
                             CREATE TABLE items (
                                 id INTEGER PRIMARY KEY AUTOINCREMENT,
                                 name TEXT NOT NULL,
@@ -380,7 +395,7 @@
                     <div>
                         <h3>Restock order (urgent → older → name)</h3>
                         <pre>
-                            <code>
+                        <code>
                                 SELECT * FROM items
                                 ORDER BY (quantity - low_stock_threshold) ASC,
                                     (strftime('%s','now') - date_added) DESC,
@@ -391,7 +406,7 @@
                     <div>
                         <h3>Low-stock filter</h3>
                         <pre>
-                            <code>
+                        <code>
                                 SELECT id,name,quantity,low_stock_threshold
                                 FROM items
                                 WHERE quantity <= low_stock_threshold;
@@ -414,11 +429,87 @@
                     <ul>
                         <li>Move to Room DAOs & migrations.</li>
                         <li>Add FTS5 for larger, typo-tolerant search.</li>
-                        <li>One-tap CSV export/import; optional SQLCipher encryption.</li>
+                        <li>Filter Button to allow user control of how the table filters.</li>
                     </ul>
                 </div>
             </div>
         </div>
+        <div id="snhu">
+            <h1>SNHU Capstone Enhancements</h1>
+            <div id="video-sec">
+                <h3 style="text-align:left">Informal Code Review Video:</h3>
+                <video controls="controls">
+                    <source src="../videos/video-review.mp4" type="video/mp4" />
+                </video>
+            </div>
+            <div id="enhancements">
+                <div class="enhancement">
+                    <h3>Enhancement One: Software Design and Engineering</h3>
+                    <h5>Artifact (what/when).</h5>
+                    <p> 
+                        StockVault Android app (Java). Core screens and architecture created during CS-499 (2025),
+                        with enhancements to the inventory list, editing flow, and notifications.
+                    </p>
+                    <h5>Why it's in my ePortfolio.</h5>
+                    <p>
+                        This artifact shows end-to-end software design: requirements, UI flow, and a maintainable code structure.
+                        The enhancement moved the app from a basic CRUD list to a well-engineered product:
+                    </p>
+                    <ul>
+                        <li>Replaced multi-screen edit forms with inline editing and clear validation.</li>
+                        <li>Introduced a repository layer between UI and SQLite for cleaner separation.</li>
+                        <li>Added Android notification channels and a settings surface.</li>
+                    </ul>
+                    <h5>What I learned / challenges / feedback.</h5>
+                    <p>
+                        I learned how small design choices (like editing in place) reduce friction and increase reliability. The biggest challenge was avoiding full list reloads after writes;
+                        I solved this with an in-memory model and selective re-renders. Peer feedback pushed me to improve error messages and empty states.
+                        Outcomes met. Software design principles (modularity, separation of concerns), usability, and basic DevOps (release build/signing prep).
+                        Not fully met. Automated UI test coverage and CI are limited; I plan to add Espresso tests and a build pipeline.
+                    </p>
+                </div>
+                <div class="enhancement">
+                    <h3 style="text-align: center">Enhancement Two: Algorithms and Data Structure</h3>
+                    <h5>Artifact (what/when).</h5>
+                    <p>The inventory list logic and search/sort engine, refined during CS-499 (2025).</p>
+                    <h5>Why it’s in my ePortfolio.</h5>
+                    <p>It demonstrates practical algorithm use inside a mobile app:</p>
+                    <ul>
+                        <li>Restock-priority comparator: orders by (quantity − threshold), then by age, then name—simple, stable, and effective.</li>
+                        <li>Fuzzy search with debounce: a lightweight edit-distance check plus ~300 ms debounce to keep typing smooth.</li>
+                        <li>In-memory caching: the full item list is kept in memory, then filtered/sorted for rendering.</li>
+                    </ul>
+                    <h5>What I learned / challenges / feedback.</h5>
+                    <p>
+                        I saw how the right O(1)/O(n) choices matter more than heavy frameworks on phones. Debouncing removed jank;
+                        a single-pass edit-distance was “good enough” for short names. The main challenge was balancing accuracy and speed;
+                        feedback led me to cap the distance check and prefer prefix matches first.
+                        Outcomes met. Applied algorithms for ranking and text matching; performance tuning and responsiveness.
+                        Not fully met. No advanced IR (e.g., FTS5) yet; that’s on my roadmap for larger datasets.
+                    </p>
+                </div>
+                <div class="enhancement">
+                    <h3 style="text-align: right">Enhancement Three: Databases</h3>
+                    <h5>Artifact (what/when).</h5>
+                    <p>SQLite schema and data layer for StockVault, built/enhanced during CS-499 (2025).</p>
+                    <h5>Why it’s in my ePortfolio.</h5>
+                    <p>It shows I can design and ship a reliable offline-first data model:</p>
+                    <ul>
+                        <li>Tables: items (name, qty, price, thresholds, timestamps) and item_prefs (per-item alerts).</li>
+                        <li>Transactions for edits, constraints/defaults to prevent bad data, and indexes for name search/restock queries.</li>
+                        <li>A clear migration path (adding last_updated, indexing, etc.).</li>
+                    </ul>
+                    <h5>What I learned / challenges / feedback.</h5>
+                    <p>
+                        I learned to keep the schema lean and let the UI cache do the heavy lifting. The challenge was avoiding extra DB churn;
+                        I now update the row, re-sort in memory, and only re-render what’s visible. Feedback from testing led me to add better input checks and to separate alert prefs from item rows.
+                        Outcomes met. Data modeling, persistence, and reliability (transactions, indexes).
+                        Not fully met. No encryption-at-rest or cloud sync yet; planned next are Room/DAO migration, CSV import/export, and optional SQLCipher.
+                    </p>
+                </div>
+            </div>
+        </div>
+
         <div id="last-section">
             <p>For more information and details, Please visit the <a href="https://github.com/XxDoomsdayxX/StockVault/tree/main">Source page</a> to view the README.md</p>
             <p><b>NOTE:</b>This project was designed and created by me as my first Java/Android Project.</p>
