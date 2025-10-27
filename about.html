@@ -1,4 +1,5 @@
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="en-US">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,20 +9,47 @@
     <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
 </head>
 <body>
-    <header id="header">
-        <nav id="nav-bar">
-            <ul id="nav-list">
-                <li><a class="nav-link" href="index.html">Main</a></li>
-                <li><a class="nav-link" href="index.html">Main</a></li>
-                <li><a class="nav-link" href="index.html">Main</a></li>
-                <li><a class="nav-link" href="index.html">Main</a></li>
-                <li><a class="nav-link" href="index.html">Main</a></li>
+    <header id="site-header">
+        <nav id="site-nav" aria-label="Primary">
+            <ul id="nav">
+                <li><a class="nav-link" href="index.html" target="_self">Home</a></li>
+                <li><a class="nav-link" href="page-not-found.html" target="_self">Blank</a></li>
+                <li><a class="nav-link" href="page-not-found.html" target="_self">Projects</a></li>
+                <li><a class="nav-link" href="page-not-found.html" target="_self">Blank</a></li>
+                <li><a class="nav-link" href="resume.html" target="_self">Resume</a></li>
             </ul>
         </nav>
     </header>
-
+    
     <main>
+        <div>
+            <video class="bg-video" autoplay loop>
+                <source src="videos/clouds.mp4" type="video/mp4" alt="Cloud Background"/>
+            </video>
+        </div>
+        <div id="about-section">
+            <h1 ><span class="gradient-text">About Me Personally:</span></h1>
+            <div id="about-section-cards">
+                <img class="image1" src="/images/nc-flag.png" alt="North Carolina State flag"/>
+                <p class="paragraph">
+                    Hello! My name is Darrell Walker, and I was born and raised in North Carolina where I grew up in town called Gastonia. I gradutaed High School in 2012 and
+                    immediatley starting working in the blue collar field where I would gather a vast amount of life skills. In 2018 I enrolled in a job corps program at a
+                    school called Oconaluftee Job Corps Civilian Conservation Center located in Cherokee, NC. There I learned many skills as an electrician during which I was sent to coloraodo
+                    for an internship for the Forest Service, where I performed maintenance for the state campgrounds which also happens to be where I met my wife.
+                    <br /><br />
+                    I married in 2019 and we have one beautiful daughter together. In 2020 I decided to change my career path and pursue a career in technology which is something I've always been fasincated with.
+                    I enrolled in a tech school called MyComputerCareer where I learned many skills in the IT field and gained several certifications in networking and security.
+                    <br /><br />
+                    Afterwards, I enrolled into <abbr title="Southern New Hampshire University">SNHU</abbr> to pursue a Bachelor's degree in Software Engineering which was completed
+                    in October of 2025. Now I seek to bring my ideas to life through hard work and alot of code.
+                </p>
+                <img class="image" src="/images/family.png" alt="Animated Family"/>
+            </div>
+            
+        </div>
+        <div id="timeline">
 
+        </div>
     </main>
 
     <footer id="footer">

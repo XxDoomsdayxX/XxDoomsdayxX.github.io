@@ -1,10 +1,10 @@
 {
   "ExpandedNodes": [
     "",
+    "\\docs",
     "\\scripts",
-    "\\styles",
-    "\\videos"
+    "\\styles"
   ],
-  "SelectedNode": "\\index.html",
+  "SelectedNode": "\\styles\\resume-css.css",
   "PreviewInSolutionExplorer": false
 }

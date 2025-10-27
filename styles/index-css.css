@@ -432,6 +432,14 @@ section {
     top: 10px;
 }
 
+#resume-logo {
+    height: 32px;
+    width: auto;
+    margin-right: 12px;
+    position: relative;
+    top: 10px;
+}
+
 #projects-container {
     margin: 0 0 3rem 3rem;
     padding: 2rem;
