@@ -1,0 +1,91 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    color: silver;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html, body {
+    height: 100%;
+    background-color: beige;
+}
+
+#nav-header {
+    display: flex;
+    flex-direction: column;
+    height: 100px;
+    background-color: black;
+    padding-top: 25px;
+    color: white;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.nav-bar {
+    background-color: black;
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.tabs {
+    display: flex;
+}
+
+    .tabs p {
+        margin: 10px 0;
+    }
+
+    .tabs button.active {
+        color: yellow;
+        transform: scale(1.1);
+    }
+
+.tablinks {
+    color: silver;
+    text-decoration: none;
+    padding: 14px 16px;
+    font-size: 17px;
+    margin: 10px 0;
+}
+
+.back {
+    margin: 10px 400px 10px 0;
+}
+
+.btn {
+    text-align: left;
+    display: inline-block;
+    padding: 0px 20px;
+    text-decoration: none;
+    background-color: transparent;
+    border: none;
+    transition: all ease 0.5s;
+}
+
+.btn:hover {
+    color: yellow;
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+}
+
+.certificate-container {
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+    margin: 20px 0;
+}
+
+.certificate{
+    margin: auto;
+    height: 75vh;
+    width: 60%;
+    border: 1px solid black;
+    border-radius: 8px;
+    z-index: 1;
+}

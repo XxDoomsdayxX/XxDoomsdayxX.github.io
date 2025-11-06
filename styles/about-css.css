@@ -108,6 +108,13 @@ html, body {
     margin-top: 100px;
 }
 
+.timeline-title {
+    position: relative;
+    text-align: center;
+    margin: 30px;
+    right: 25%;
+}
+
 #timeline {
     position: relative;
     height: 1000px;
@@ -121,12 +128,245 @@ html, body {
         transform: translateX(-50%);
         background: black;
         border-radius: 6px;
-        width: 10px;
-        height: 100%;
+        width: 8px;
+        height: 80%;
     }
+
+.dot {
+    border: 1px solid black;
+    border-radius: 20px;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: black;
+    z-index: 1;
+}
+    .dot:hover, .dot:focus{
+        transform: translateX(-50%) scale(1.3);
+        cursor: pointer;
+        box-shadow: 0 0 60px rgb(255, 0, 0, 1);
+        outline: solid 1px red;
+        outline-offset: 4px;
+    }
+
+    .dot p {
+        position: absolute;
+        color: purple;
+        font-size: 1.1rem;
+        top: 24px;
+        left: 80%;
+    }
+
+.panel {
+    position: absolute;
+    left: calc(40%);
+    padding: 20px;
+    max-width: 600px;
+    border-radius: 8px;
+    display: flex;
+    opacity: 0;
+    backdrop-filter: blur(1px);
+    background-color: rgba(255, 255, 255, 0.3);
+    transform: translateX(0%);
+    transition: opacity 1s, transform 1s;
+}
+
+    .panel img {
+        margin-right: 20px;
+    }
+
+.diploma {
+    position: relative;
+    top: 115px;
+    right: 250px;
+}
+
+.transcript {
+    position: relative;
+    top: 115px;
+    right: 225px;
+}
+
+    .panel.show {
+        display: flex;
+        opacity: 1;
+        transition: opacity 1.5s, transform 1.5s;
+    }
+
+.left.show {
+    transform: translateX(-105%);
+}
+
+.right.show {
+    transform: translateX(75%);
+}
+
+.second {
+    top: 185px;
+}
+
+.third {
+    top: 385px;
+}
+
+.fourth {
+    top: 585px;
+}
+
+.fifth {
+    top: 785px;
+}
 
 #copy {
     margin-top: 20px;
     text-align: center;
     color: red;
+}
+
+@media screen and (max-width: 768px) {
+    /* center text everywhere */
+    html, body, #about-section, #about-section-cards .paragraph, .timeline-title, .panel{
+        text-align: center;
+    }
+
+    /* NAV */
+    #nav {
+        gap: 16px;
+        font-size: 1rem;
+        flex-wrap: wrap;
+    }
+
+    .nav-link {
+        padding: 6px 14px;
+        border-radius: 16px;
+        transform: none;
+    }
+
+        .nav-link:hover {
+            transform: none;
+        }
+
+    /* ABOUT */
+    #about-section {
+        margin: 12px;
+    }
+
+    #about-section-cards {
+        flex-direction: column;
+        gap: 20px;
+        margin-top: 24px;
+    }
+
+        #about-section-cards .paragraph {
+            width: 100%;
+            font-size: 1rem;
+            line-height: 1.5rem;
+            padding: 0 10px;
+            text-align: left;
+        }
+
+    .image {
+        margin: auto;
+        width: 55vw;
+        max-width: 260px;
+    }
+
+    .image1 {
+        width: 65vw;
+        height: auto;
+        transform: none;
+        margin: 0 auto;
+    }
+
+    /* TIMELINE */
+    .timeline-title {
+        right: 0;
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #timeline {
+        height: 800px;
+        margin: 40px 0;
+    }
+
+        #timeline::before {
+            left: 8%;
+            transform: none;
+            width: 6px;
+            height: 90%;
+        }
+
+    .dot {
+        width: 22px;
+        height: 22px;
+        left: 6%;
+        transform: none;
+    }
+
+        .dot:hover, .dot:focus {
+            transform:scale(1.1);
+        }
+
+        .dot p {
+            top: -2px;
+            left: 28px;
+            font-size: 0.95rem;
+            text-align: center;
+        }
+
+    /* TIMELINE PANELS */
+    .panel {
+        left: 15%;
+        max-width: 82%;
+        transform: none;
+        display: none;
+        height: auto;
+    }
+
+        .panel img {
+            display: none;
+        }
+
+        .panel.show {
+            transform: none;
+        }
+
+    .left.show, .right.show {
+        transform: none;
+    }
+
+    .transcript {
+        right: 50px;
+    }
+
+    .diploma, .transcript {
+        position: absolute;
+        top: 50px;
+        left: 10px;
+    }
+
+    /* Adjust dot positions for shorter viewport */
+    .second {
+        top: 160px;
+    }
+
+        .second .panel {
+            position: absolute;
+            top: 200px;
+        }
+
+    .third {
+        top: 350px;
+    }
+
+    .fourth {
+        top: 530px;
+    }
+
+    .fifth {
+        top: 700px;
+    }
 }
