@@ -54,22 +54,29 @@ div {
 
 /* --- Mobile layout --- */
 @media (max-width: 768px) {
-    .bg-video,
-    .btn {
-        display: none !important;
+    /* remove video + desktop button on small screens */
+    .bg-video {
+        display: none;
     }
 
+    /* simple solid background and normal flow */
     body {
-        background: none;
-        overflow: hidden;
+        background: #000;
+        text-align: left;
     }
 
+    /* let divs behave like normal blocks on mobile */
+    div {
+        display: block;
+    }
+
+    /* make the PDF fill the viewport */
     #resume_frame {
-        position: fixed;
+        position: relative;
         inset: 0;
         width: 100vw;
-        height: 100svh;
-        margin: 0;
+        height: 90vh;
+        margin-top: 90px;
         border-radius: 0;
     }
 }

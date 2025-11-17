@@ -3,20 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\walke\\Workspace\\EPortfolio\\XxDoomsdayxX.github.io\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\walke\\Workspace\\EPortfolio\\XxDoomsdayxX.github.io\\scripts\\certificates-js.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:scripts\\certificates-js.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\walke\\Workspace\\EPortfolio\\XxDoomsdayxX.github.io\\study-time.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:study-time.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\walke\\Workspace\\EPortfolio\\XxDoomsdayxX.github.io\\certificates.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:certificates.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\walke\\Workspace\\EPortfolio\\XxDoomsdayxX.github.io\\styles\\certificates-css.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:styles\\certificates-css.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\walke\\Workspace\\EPortfolio\\XxDoomsdayxX.github.io\\styles\\about-css.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:styles\\about-css.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\walke\\Workspace\\EPortfolio\\XxDoomsdayxX.github.io\\styles\\study-css.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:styles\\study-css.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,54 +26,28 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "certificates-js.js",
-              "DocumentMoniker": "C:\\Users\\walke\\Workspace\\EPortfolio\\XxDoomsdayxX.github.io\\scripts\\certificates-js.js",
-              "RelativeDocumentMoniker": "scripts\\certificates-js.js",
-              "ToolTip": "C:\\Users\\walke\\Workspace\\EPortfolio\\XxDoomsdayxX.github.io\\scripts\\certificates-js.js",
-              "RelativeToolTip": "scripts\\certificates-js.js",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-11-05T01:37:27.703Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "certificates-css.css",
-              "DocumentMoniker": "C:\\Users\\walke\\Workspace\\EPortfolio\\XxDoomsdayxX.github.io\\styles\\certificates-css.css",
-              "RelativeDocumentMoniker": "styles\\certificates-css.css",
-              "ToolTip": "C:\\Users\\walke\\Workspace\\EPortfolio\\XxDoomsdayxX.github.io\\styles\\certificates-css.css",
-              "RelativeToolTip": "styles\\certificates-css.css",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-11-04T01:48:07.514Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "certificates.html",
-              "DocumentMoniker": "C:\\Users\\walke\\Workspace\\EPortfolio\\XxDoomsdayxX.github.io\\certificates.html",
-              "RelativeDocumentMoniker": "certificates.html",
-              "ToolTip": "C:\\Users\\walke\\Workspace\\EPortfolio\\XxDoomsdayxX.github.io\\certificates.html",
-              "RelativeToolTip": "certificates.html",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAABUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-11-04T01:46:16.89Z",
+              "Title": "study-css.css",
+              "DocumentMoniker": "C:\\Users\\walke\\Workspace\\EPortfolio\\XxDoomsdayxX.github.io\\styles\\study-css.css",
+              "RelativeDocumentMoniker": "styles\\study-css.css",
+              "ToolTip": "C:\\Users\\walke\\Workspace\\EPortfolio\\XxDoomsdayxX.github.io\\styles\\study-css.css",
+              "RelativeToolTip": "styles\\study-css.css",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAADUAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-11-13T05:56:48.789Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "about-css.css",
-              "DocumentMoniker": "C:\\Users\\walke\\Workspace\\EPortfolio\\XxDoomsdayxX.github.io\\styles\\about-css.css",
-              "RelativeDocumentMoniker": "styles\\about-css.css",
-              "ToolTip": "C:\\Users\\walke\\Workspace\\EPortfolio\\XxDoomsdayxX.github.io\\styles\\about-css.css",
-              "RelativeToolTip": "styles\\about-css.css",
-              "ViewState": "AgIAACwBAAAAAAAAAAAowGgBAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-10-30T02:58:37.675Z",
+              "DocumentIndex": 0,
+              "Title": "study-time.html",
+              "DocumentMoniker": "C:\\Users\\walke\\Workspace\\EPortfolio\\XxDoomsdayxX.github.io\\study-time.html",
+              "RelativeDocumentMoniker": "study-time.html",
+              "ToolTip": "C:\\Users\\walke\\Workspace\\EPortfolio\\XxDoomsdayxX.github.io\\study-time.html",
+              "RelativeToolTip": "study-time.html",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-11-13T05:54:32.926Z",
               "EditorCaption": ""
             }
           ]

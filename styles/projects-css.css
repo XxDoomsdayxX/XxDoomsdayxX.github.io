@@ -1,0 +1,67 @@
+﻿* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#nav-header {
+    height: 100px;
+    background-color: black;
+    padding-top: 25px;
+    color: white;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.btn {
+    text-align: left;
+    display: block;
+    margin-left: 20px;
+    text-decoration: none;
+    color: silver;
+}
+
+.container {
+    margin: 20px auto;
+    width: 95%;
+}
+
+details > summary {
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    border-bottom: 2px solid black;
+}
+
+    details > div > p {
+        font-size: 1.2rem;
+    }
+
+a {
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+}
+
+.card {
+    background-color: rgba(128, 128, 128, 0.3);
+    backdrop-filter: blur(10px);
+    color: black;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 10px;
+    width: 85%;
+    height: 250px;
+    text-align: center;
+    overflow: clip;
+    cursor: pointer;
+    transition: all ease 0.8s;
+}
+    .card:hover {
+        transform: scale(.90);
+        border-radius: 40px;
+        background-color: rgba(128, 128, 128, 0.6);
+        box-shadow: 2px 2px 2px black;
+        font-weight: bold;
+    }
+

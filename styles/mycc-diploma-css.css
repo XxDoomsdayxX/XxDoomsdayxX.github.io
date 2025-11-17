@@ -1,0 +1,38 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    color: silver;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#nav-header {
+    height: 100px;
+    background-color: black;
+    padding-top: 25px;
+    color: white;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.btn {
+    text-align: left;
+    display: block;
+    margin-left: 20px;
+    text-decoration: none;
+}
+
+#diploma-container {
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+    background-color: beige;
+}
+
+.mycc-diploma {
+    margin: auto;
+    height: 88vh;
+    width: 70%;
+    border: none;
+    border-radius: 8px;
+    z-index: 1;
+}

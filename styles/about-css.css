@@ -3,7 +3,7 @@
     margin: 0;
 }
 
-html, body {
+body {
     background-image: linear-gradient(to top, rgba(0, 255, 200, 0.75), rgba(0, 255, 200, 0));
     font-family: system-ui, sans-serif;
 }
@@ -217,6 +217,29 @@ html, body {
 
 .fifth {
     top: 785px;
+}
+
+.myccDiploma {
+    position: relative;
+    top: 35px;
+    margin-right: 20px;
+}
+
+.myccTranscript {
+    position: relative;
+    top: 35px;
+}
+
+.snhu-diploma {
+    position: relative;
+    top: 90px;
+    right: 250px;
+}
+
+.snhu-transcript {
+    position: relative;
+    top: 90px;
+    right: 225px;
 }
 
 #copy {

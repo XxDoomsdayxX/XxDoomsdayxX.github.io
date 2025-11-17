@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <title>Highschool Transcript</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <link type="text/css" href="/styles/study-css.css" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <div id="nav-header">
+            <h1><span id="javascript">Javascript</span> <span id="exercise">Exercise's</span></h1>
+            <a class="btn" href="about.html" onclick="if(history.length>1){history.back();return false;}" target="_self">< Back</a>
+        </div>
+    </header>
+
+    <main>
+        <div id="block1">
+            <h1>Rock, Paper, Scissor</h1>
+
+            <div id="block1-1">
+
+                <h2>Score</h2>
+                <div id="scoreboard">
+                    <h4>Computer: <span class="score comp-score">0</span></h4>
+                    <h4>You: <span class="score user-score">0</span></h4>
+                </div>
+
+                <div id="buttons">
+                    <button class="btn2" onclick="playGame('rock')">👊</button>
+                    <button class="btn2" onclick="playGame('paper')">✋</button>
+                    <button class="btn2" onclick="playGame('scissor')">✌️</button>
+                </div>
+
+                <h2>Results</h2>
+                <div id="results">
+                    <h4>Computer: <span class="result comp-result"></span></h4>
+                    <h4>You: <span class="result user-result">Paper</span></h4>
+                </div>
+
+                <h2 id="message">YOU WIN!!</h2>
+
+                <button id="reset" onclick="playGame('reset')">Reset Score</button>
+            </div>
+        </div>
+        <hr />
+
+    </main>
+
+    <footer>
+    </footer>
+
+    <script defer src="scripts/study-script.js"></script>
+</body>
+</html>

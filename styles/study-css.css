@@ -1,0 +1,185 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    color: silver;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html{
+    background: linear-gradient(to bottom, rgba(0, 255, 200, 0.75), rgba(0, 255, 200, 0));
+    font-family: system-ui, sans-serif;
+    background-size: 100% 100vh;
+}
+
+#nav-header {
+    height: 100px;
+    background-color: black;
+    padding-top: 25px;
+    color: white;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.btn {
+    text-align: left;
+    display: block;
+    margin-left: 20px;
+    text-decoration: none;
+}
+
+#javascript {
+    position: relative;
+    display: inline-block;
+    animation: slideRight 3s linear;
+}
+
+#exercise {
+    position: relative;
+    display: inline-block;
+    animation: slideLeft 3s linear;
+}
+
+
+
+
+/*Rock, Paper, Scissor Game*/
+#block1 h1 {
+    text-align: center;
+    margin: 50px 0;
+    color: black;
+}
+
+#block1-1 {
+    margin: auto;
+    height: 550px;
+    width: 600px;
+    background-color: black;
+    border-radius: 25px;
+    padding: 25px;
+    margin-bottom: 50px;
+}
+
+#scoreboard {
+    display: flex;
+    margin-top: 20px;
+    gap: 200px;
+}
+
+.score {
+    margin-left: 50px;
+    font-size: 1.2rem;
+}
+
+#buttons {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 75px;
+    margin-bottom: 45px;
+}
+
+#results{
+    display: flex;
+    margin-top: 20px;
+    gap: 200px;
+}
+
+.result {
+    margin-left: 30px;
+    font-size: 1.2rem;
+}
+
+#reset {
+    color: white;
+    border-radius: 4px;
+    border: 1px solid white;
+    background: transparent;
+    margin-top: 20px;
+    cursor: pointer;
+}
+    #reset:hover {
+        color: black;
+        background: white;
+        transform: scale(1.1);
+    }
+
+.btn2 {
+    margin-top: 75px;
+    border-radius: 50px;
+    border: solid 2px blue;
+    background-color: transparent;
+    height: 100px;
+    width: 100px;
+    font-size: 60px;
+    cursor: pointer;
+}
+
+    .btn2:hover {
+        background-color: blue;
+        color: white;
+        transform: scale(1.2);
+    }
+
+#message {
+    margin-top: 50px;
+    text-align: center;
+}
+/*END Rock, Paper, Scissor Game*/
+
+        @keyframes slideRight {
+            from {
+                transform: translateX(-1000px) rotate(0deg);
+            }
+
+            to {
+                transform: translateX(0) rotate(360deg);
+            }
+        }
+
+        @keyframes slideLeft {
+            from {
+                transform: translateX(1000px) scale(0);
+            }
+
+            to {
+                transform: translateX(0) scale(1);
+            }
+        }
+
+
+
+@media screen and (max-width: 768px) {
+
+    #block1-1 {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        padding: 16px;
+    }
+
+    #scoreboard,
+    #results {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .score,
+    .result {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    #buttons {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .btn2 {
+        margin-top: 20px;
+    }
+
+    #block1 h1 {
+        margin: 20px 0;
+    }
+}
