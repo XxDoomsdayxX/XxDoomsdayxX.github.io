@@ -22,8 +22,12 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -32,7 +36,7 @@
               "RelativeDocumentMoniker": "scripts\\study-script.js",
               "ToolTip": "C:\\Users\\walke\\Workspace\\EPortfolio\\XxDoomsdayxX.github.io\\scripts\\study-script.js",
               "RelativeToolTip": "scripts\\study-script.js",
-              "ViewState": "AgIAAFYAAAAAAAAAAAAQwIYAAAATAAAAAAAAAA==",
+              "ViewState": "AgIAAJ4AAAAAAAAAAAAmwLkAAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
               "WhenOpened": "2025-11-17T01:25:20.754Z",
               "EditorCaption": ""
@@ -45,9 +49,10 @@
               "RelativeDocumentMoniker": "styles\\study-css.css",
               "ToolTip": "C:\\Users\\walke\\Workspace\\EPortfolio\\XxDoomsdayxX.github.io\\styles\\study-css.css",
               "RelativeToolTip": "styles\\study-css.css",
-              "ViewState": "AgIAAIYAAAAAAAAAAAAowLgAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAANAAAAAAAAAAAAAAAO4AAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-11-13T05:56:48.789Z"
+              "WhenOpened": "2025-11-13T05:56:48.789Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -57,14 +62,10 @@
               "RelativeDocumentMoniker": "study-time.html",
               "ToolTip": "C:\\Users\\walke\\Workspace\\EPortfolio\\XxDoomsdayxX.github.io\\study-time.html",
               "RelativeToolTip": "study-time.html",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAAADEAAAAsAAAAAAAAAA==",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAADMAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
               "WhenOpened": "2025-11-13T05:54:32.926Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
             }
           ]
         }

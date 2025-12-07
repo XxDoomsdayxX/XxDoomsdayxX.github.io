@@ -1,4 +1,4 @@
-* {
+﻿* {
     box-sizing: border-box;
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -170,18 +170,26 @@ html, body{
 
 
 #board {
+    position: relative;
     display: grid;
-    grid-template-columns: repeat(3, 100px);
-    grid-template-rows: repeat(3, 100px);
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
     justify-content: center;
+    width: 300px;
+    height: 300px;
+    max-width: 90vw;
+    max-height: 90vw;
+    overflow: hidden;
 }
 
 .cell {
-    width: 100px;
-    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
     border: 1px solid black;
     text-align: center;
-    margin: auto;
     font-family: 'Bookman Old Style';
     font-size: 72px;
     color: black;
@@ -203,6 +211,74 @@ html, body{
         .cell:hover {
         background-color: lightgray;
         cursor: pointer;
+    }
+
+    .cell.win-line {
+        position: relative;
+        background-color: rgba(0, 255, 0, 0.2);
+        border: 3px solid #00ff00;
+    }
+
+#win-line {
+    position: absolute;
+    background: red;
+    height: 4px;
+    width: 100%;
+    top: 50%;
+    left: 0;
+    transform-origin: center center;
+    display: none;
+}
+
+    /* Horizontal rows (values are % of board height) */
+    #win-line.row-0 {
+        top: 16.6%;
+        transform: none;
+    }
+
+    #win-line.row-1 {
+        top: 50%;
+        transform: none;
+    }
+
+    #win-line.row-2 {
+        top: 83.3%;
+        transform: none;
+    }
+
+    /* Vertical columns */
+    #win-line.vertical {
+        width: 4px;
+        height: 100%;
+        top: 0;
+        transform: none;
+    }
+
+    #win-line.col-0 {
+        left: 16.6%;
+    }
+
+    #win-line.col-1 {
+        left: 50%;
+    }
+
+    #win-line.col-2 {
+        left: 83.3%;
+    }
+
+    /* Diagonals */
+    #win-line.diag-main {
+        width: 140%;
+        top: 50%;
+        left: -20%;
+        transform: rotate(45deg);
+    }
+
+    #win-line.diag-anti {
+        width: 140%;
+        top: 50%;
+        left: -20%;
+        transform: rotate(-45deg);
     }
 
 #restart {
@@ -239,39 +315,58 @@ html, body{
         box-shadow: 0 0 30px green;
     }
 
+@media screen and (max-width: 768px) {
 
-        @media screen and (max-width: 768px) {
+    #block1-1 {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        padding: 16px;
+    }
 
-            #block1-1 {
-                width: 100%;
-                max-width: 100%;
-                height: auto;
-                padding: 16px;
-            }
+    #scoreboard,
+    #results {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
 
-            #scoreboard,
-            #results {
-                flex-direction: column;
-                align-items: center;
-                gap: 10px;
-            }
+    .score,
+    .result {
+        margin-left: 0;
+        text-align: center;
+    }
 
-            .score,
-            .result {
-                margin-left: 0;
-                text-align: center;
-            }
+    #buttons {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
 
-            #buttons {
-                flex-wrap: wrap;
-                gap: 20px;
-            }
+    .btn2 {
+        margin-top: 20px;
+    }
 
-            .btn2 {
-                margin-top: 20px;
-            }
+    #block1 h1 {
+        margin: 20px 0;
+    }
 
-            #block1 h1 {
-                margin: 20px 0;
-            }
-        }
+    #block-2 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #details {
+        margin-top: 20px;
+        left: 10%;
+        width: 90%;
+    }
+
+    #board {
+        width: 100vw;
+        height: 100vw;
+    }
+
+    .cell {
+        font-size: 48px;
+    }
+}

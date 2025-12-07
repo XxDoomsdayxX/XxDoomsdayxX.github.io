@@ -71,6 +71,7 @@ let status = document.getElementById("status");
 let cells = document.getElementsByClassName("cell");
 let restart = document.getElementById("restart");
 let mode = document.getElementById("mode");
+let winLine = document.getElementById("win-line");
 
 const winConditions = [
     [0, 1, 2],
@@ -127,6 +128,10 @@ function checkWin() {
 
         if (cellA !== "" && cellA === cellB && cellB === cellC) {
             winner = true;
+
+            highlightWinningLine(condition);
+            showWinLine(condition);
+
             if (opponent === "Player") {
                 status.textContent = `Player ${cellA} Wins !!`;
             } else if (opponent === "Computer"){
@@ -137,9 +142,12 @@ function checkWin() {
                 }
             }
             return;
-        } else {
-            continue;
         }
+    }
+
+    if (!options.includes("") && winner === false) {
+        winner = true;
+        status.textContent = "It's A Tie !!";
     }
 }
 
@@ -160,7 +168,10 @@ function restartGame() {
     currentPlayer = "X";
     for (let cell of cells) {
         cell.textContent = "";
+        cell.classList.remove("win-line");
     }
+    winLine.style.display = "none";
+    winLine.className = "";
     status.textContent = `Player ${currentPlayer}'s turn`;
 }
 
@@ -189,23 +200,122 @@ function computerMove() {
             clearInterval(timerId);
             status.textContent = `${player}'s turn`;
 
-            let availableCells = [];
+            let aiSymbol = currentPlayer;
+            let humanSymbol = aiSymbol === "X" ? "O" : "X";
+            let chosenIndex = -1;
+
+            // Check if computer has winning move
             for (let i = 0; i < options.length; i++) {
                 if (options[i] === "") {
-                    availableCells.push(i);
+                    options[i] = aiSymbol;
+
+                    let isWinningMove = false;
+                    for (let condition of winConditions) {
+                        const [a, b, c] = condition;
+
+                        if (options[a] === aiSymbol && options[b] === aiSymbol && options[c] === aiSymbol) {
+                            isWinningMove = true;
+                            break;
+                        }
+                    }
+
+                    options[i] = "";
+
+                    if (isWinningMove) {
+                        chosenIndex = i;
+                        break;
+                    }
+                }
+            }
+            // Check to see if user has winning move and block it
+            if (chosenIndex === -1) {
+                for (let i = 0; i < options.length; i++) {
+                    if (options[i] === "") {
+                        options[i] = humanSymbol;
+
+                        var humanWins = false;
+                        for (let condition of winConditions) {
+                            const [a, b, c] = condition;
+
+                            if (options[a] === humanSymbol && options[b] === humanSymbol && options[c] === humanSymbol) {
+                                humanWins = true;
+                                break;
+                            }
+                        }
+                        options[i] = "";
+
+                        if (humanWins) {
+                            chosenIndex = i;
+                            break;
+                        }
+                    }
                 }
             }
 
-            if (availableCells.length > 0) {
-                let choice = Math.floor(Math.random() * availableCells.length);
-                let cellIndex = availableCells[choice];
-                cells[cellIndex].textContent = currentPlayer;
-                options[cellIndex] = currentPlayer;
-                checkWin();
-                if (!winner) {
-                    switchPlayer();
+            // If no winning or blocking move, choose random
+            if (chosenIndex === -1) {
+                let emptyIndices = [];
+
+                for (let i = 0; i < options.length; i++) {
+                    if (options[i] === "") {
+                        emptyIndices.push(i);
+                    }
                 }
+
+                
+
+                if (emptyIndices.length > 0) {
+                    let randomIndex = Math.floor(Math.random() * emptyIndices.length);
+                    chosenIndex = emptyIndices[randomIndex];
+                } else {
+                    return;
+                }
+            }
+
+            cells[chosenIndex].textContent = currentPlayer;
+            options[chosenIndex] = currentPlayer;
+            checkWin();
+            if (!winner) {
+                switchPlayer();
             }
         }
     }, 1000);
+}
+
+function highlightWinningLine(condition) {
+    const [a, b, c] = condition;
+
+    cells[a].classList.add("win-line");
+    cells[b].classList.add("win-line");
+    cells[c].classList.add("win-line");
+}
+
+function showWinLine(condition) {
+    winLine.className = "";
+    winLine.style.display = "block";
+
+    const [a, b, c] = condition;
+
+    // Rows
+    if (a === 0 && b === 1 && c === 2) {
+        winLine.classList.add("row-0");
+    } else if (a === 3 && b === 4 && c === 5) {
+        winLine.classList.add("row-1");
+    } else if (a === 6 && b === 7 && c === 8) {
+        winLine.classList.add("row-2");
+    }
+    // Columns
+    else if (a === 0 && b === 3 && c === 6) {
+        winLine.classList.add("vertical", "col-0");
+    } else if (a === 1 && b === 4 && c === 7) {
+        winLine.classList.add("vertical", "col-1");
+    } else if (a === 2 && b === 5 && c === 8) {
+        winLine.classList.add("vertical", "col-2");
+    }
+    // Diagonals
+    else if (a === 0 && b === 4 && c === 8) {
+        winLine.classList.add("diag-main");
+    } else if (a === 2 && b === 4 && c === 6) {
+        winLine.classList.add("diag-anti");
+    }
 }
